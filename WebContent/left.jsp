@@ -4,7 +4,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 </head>
 <body>
 	<div class="menu">
@@ -30,8 +29,7 @@
 			</tr>
 			<tr>
 				<td>
-					<table border=1 width="183" height="200" cellspacing=0
-						cellpadding=0>
+					<table border=1 width="183" height="200" cellspacing=0 cellpadding=0>
 						<tr>
 							<td height=26><a href="" target="_parent"><font size=2>공지사항</font></td>
 						</tr>

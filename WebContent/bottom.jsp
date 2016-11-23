@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 	<head>
 	</head>
@@ -8,7 +8,6 @@
 		<table border=0 align="center">	
      		<tr>
       			<td style="color:black;font-size: 10px;">&nbsp;&nbsp;Study Hard</td>
-      			<td style="color:black;font-size: 10px;">&nbsp;</td>
       			<td style="color:black;font-size: 10px;">&nbsp;만든이 : 김민아, 김윤민</td>
       			<td style="color:black;font-size: 10px;">&nbsp;성신여자대학교</td>
      		</tr>

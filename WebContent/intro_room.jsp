@@ -15,7 +15,9 @@
 			<jsp:include page="left.jsp"></jsp:include>
 		</div>
 		<!-- 본문 -->
-		<div id="content" align="center"></div>
+		<div id="content" align="center">
+			<img src="./image/intro_room.jpg">
+		</div>
 		<!-- 본문 끝 -->
 		<div id="footer">
 			<jsp:include page="bottom.jsp"></jsp:include>
@@ -23,4 +25,3 @@
 	</div>
 </body>
 </html>
-
