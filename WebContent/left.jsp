@@ -7,7 +7,8 @@
 </head>
 <body>
 	<div class="menu">
-		<img src="./image/login.jpg" width="182" height="155">
+		<iframe width="182" height="155" name="login" id="login"
+			src="HomeLoginServlet" scrolling="no" frameborder="0"></iframe>
 		<br> <br>
 		<table border=1 cellspacing=0 cellpadding=0 bordercolordark="black">
 			<tr>
@@ -15,8 +16,8 @@
 					<table border=1 width="183" height="230" cellspacing=0
 						cellpadding=0>
 						<tr>
-							<td height=26><img src="" border=0> 
-							<a href="" target="_parent"><font size=2>스터디룸 순위</font></a></td>
+							<td height=26><img src="" border=0> <a href=""
+								target="_parent"><font size=2>스터디룸 순위</font></a></td>
 						</tr>
 						<tr>
 							<td>1,2,3</td>
