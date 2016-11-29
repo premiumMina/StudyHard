@@ -23,11 +23,15 @@
 	background-color: #ffffff;
 	float: left;
 	width: 200px;
-	height: 1600px;
+	height: 1000px;
 }
 
 #footer {
 	background-color: #ffffff;
 	clear: both;
 	height: 100px;
+}
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
 }

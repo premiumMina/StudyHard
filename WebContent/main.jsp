@@ -15,7 +15,9 @@
 			<jsp:include page="left.jsp"></jsp:include>
 		</div>
 		<!-- 본문 -->
-		<div id="content" align="center"></div>
+		<div id="content">
+			<jsp:include page="centerSlide.jsp"></jsp:include>
+		</div>
 		<!-- 본문 끝 -->
 		<div id="footer">
 			<jsp:include page="bottom.jsp"></jsp:include>
