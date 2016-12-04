@@ -1,8 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+	String id = (String) session.getAttribute("id");
+	String name = (String) session.getAttribute("name");
+%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>STUDYHARD에 오신걸 환영합니다.</title>
 </head>
 <body>
 	<%
@@ -22,16 +27,15 @@
 		} else if (session.getAttribute("id") == null) {
 	%>
 	아이디가 존재하지 않습니다.
-	
-	<form action="/SignUpServlet" method="post">
-		<input type="submit" name="logout" value="회원가입">
+
+	<form method="post" action="/join.jsp" target="_parent">
+		<input type="submit" value="회원가입" />
 	</form>
-	
+
 	<%
 		} else {
 	%>
-	<%=session.getAttribute("id")%>
-	님이 로그인되었습니다.
+	<%=name%> 님 반갑습니다.
 	
 	<form action="/login.jsp" method="post">
 		<input type="submit" name="logout" value="로그아웃">

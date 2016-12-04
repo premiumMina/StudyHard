@@ -7,19 +7,19 @@
 <link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 <body>
-	<div id="#container">
-		<div id="header">
+	<div class="container">
+		<div class="header">
 			<jsp:include page="top.jsp"></jsp:include>
 		</div>
-		<div id="sideinfo">
+		<div class="sideinfo">
 			<jsp:include page="left.jsp"></jsp:include>
 		</div>
 		<!-- 본문 -->
-		<div id="content">
+		<div class="content" align="center">
 			<jsp:include page="centerSlide.jsp"></jsp:include>
-		</div>
+		</div>	
 		<!-- 본문 끝 -->
-		<div id="footer">
+		<div class="footer">
 			<jsp:include page="bottom.jsp"></jsp:include>
 		</div>
 	</div>

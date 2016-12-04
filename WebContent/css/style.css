@@ -1,37 +1,38 @@
 @CHARSET "UTF-8";
 
-#container {
-	background-color: #F0F0F0;
-	width: 960px;
+.container {
+	background-color: #ffffff;
+	max-width: 1000px;
 	margin: 0 auto;
-	padding: 10px;
+	position: inherit;
 }
 
-#header {
+.header {
 	background-color: #ffffff;
 	height: 100px;
 }
 
-#content {
+.content {
 	background-color: #ffffff;
-	float: left;
+	position: inherit;
 	width: 960px;
 	height: 800px;
+	
 }
 
-#sideinfo {
+.sideinfo {
 	background-color: #ffffff;
 	float: left;
 	width: 200px;
 	height: 1000px;
 }
 
-#footer {
+.footer {
 	background-color: #ffffff;
 	clear: both;
 	height: 100px;
 }
 .slideshow-container {
 	max-width: 1000px;
-	position: relative;
+	position: inherit;
 }

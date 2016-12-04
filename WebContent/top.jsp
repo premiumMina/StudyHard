@@ -3,6 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>STUDYHARD에 오신걸 환영합니다.</title>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
 		<!-- 예약 -->
 		<area shape="rect" coords="542, 16, 598, 36" href="" target="_parent">
 		<!-- 스터디 순서 -->
-		<area shape="rect" coords="640, 17, 697, 35" href="" target="_parent">
+		<area shape="rect" coords="640, 17, 697, 35" href="/UpdateAction1.do" target="_parent">
 		<!-- 마이페이지 -->
 		<area shape="rect" coords="760, 17, 790, 35" href="" target="_parent">
 		<!-- FAQ -->
