@@ -3,9 +3,9 @@
 	String id = (String) session.getAttribute("id");
 
 	if (id == null) {
-		response.sendRedirect("login.jsp");
+		response.sendRedirect("main.jsp");
 	} else {
 		session.invalidate();
-		response.sendRedirect("login.jsp");
+		response.sendRedirect("main.jsp");
 	}
 %>

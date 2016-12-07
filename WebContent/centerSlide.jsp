@@ -3,21 +3,20 @@
 <!DOCTYPE html>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="./css/style.css" />
 
 <body>
 
 	<div class="slideshow-container">
 		<div class="mySlides">
-			<img src="./image/study1.jpg" width="600" height="300">
+			<img src="./image/study1.jpg" style="width: 100%">
 		</div>
 
 		<div class="mySlides">
-			<img src="./image/study2.jpg" width="600" height="300">
+			<img src="./image/study2.jpg" style="width: 100%">
 		</div>
 
 		<div class="mySlides">
-			<img src="./image/study3.jpg" width="600" height="300">
+			<img src="./image/study3.jpg" style="width: 100%">
 		</div>
 	</div>
 

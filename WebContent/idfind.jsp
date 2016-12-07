@@ -18,11 +18,14 @@
 		<div class="top">
 			<jsp:include page="/top.jsp"></jsp:include>
 		</div>
-
-		<div class="sideinfo">
-			<jsp:include page="/left.jsp"></jsp:include>
+		
+		<div>
+		  	<table>
+		  	<tr>
+		  		<td>&nbsp;</td>
+		  	</tr>
+		  	</table>
 		</div>
-
 		<div class="content" align="center">
 			<form name="find1" id="find1" action="idfindAction.do" method="post">
 				<table width="600" cellspacing="0" bordercolordark="white" bordercolorlight="#CCCCCC" border="1" bordercolor="#CCCCCC" align="center" height="80">

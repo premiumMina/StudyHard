@@ -29,7 +29,7 @@
 		</div>
 
 		<div class="sideinfo">
-			<jsp:include page="/left.jsp"></jsp:include>
+			<jsp:include page="/login.jsp"></jsp:include>
 		</div>
 
 		<div class="content" align="center">
@@ -44,7 +44,7 @@
 			</table>
 			<br>
 
-			<form action="UpdateAction2.do" method="post" name="join" id="join">
+			<form action="UpdateAction2.do" method="post">
 				<table width="600" cellspacing="0" bordercolordark="white"
 					bordercolorlight="#CCCCCC" border="1" bordercolor="#CCCCCC"
 					align="center" height="283">

@@ -25,7 +25,7 @@ public class MemberFrontController extends javax.servlet.http.HttpServlet implem
 		} else if (command.equals("/join.do")) { // 회원가입 페이지
 			forward = new ActionForward();
 			forward.setRedirect(false);
-			forward.setPath("member/member_join.jsp");
+			forward.setPath("/member_join.jsp");
 
 		} else if (command.equals("/idfind.do")) { // 회원가입 페이지
 			forward = new ActionForward();

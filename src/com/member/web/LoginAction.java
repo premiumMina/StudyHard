@@ -46,7 +46,7 @@ public class LoginAction implements Action {
 		member = memberdao.getMember(request.getParameter("id"));
 		session.setAttribute("name", member.getName());
 		forward.setRedirect(true);
-		forward.setPath("login.do");
+		forward.setPath("main.do");
 
 		return forward;
 	}

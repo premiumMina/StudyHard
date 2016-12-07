@@ -16,7 +16,7 @@ public class MemberDAO {
 	}
 	
 	public int isMember(MemberBean member) {
-		String sql = "SELECT password FROM MEMBER WHERE id=?";
+		String sql = "SELECT password FROM member WHERE id=?";
 		int result = -1;
 		
 		try {

@@ -1,38 +1,40 @@
 @CHARSET "UTF-8";
 
 .container {
-	background-color: #ffffff;
-	max-width: 1000px;
-	margin: 0 auto;
-	position: inherit;
+   background-color: #ffffff;
+   max-width: 0 auto;
+   margin: 0 auto;
+   position: inherit;
 }
 
 .header {
-	background-color: #ffffff;
-	height: 100px;
+   background-color: #ffffff;
+   height: 100px;
 }
 
 .content {
-	background-color: #ffffff;
-	position: inherit;
-	width: 960px;
-	height: 800px;
-	
+   background-color: #ffffff;
+   position: inherit;
+   
 }
 
 .sideinfo {
-	background-color: #ffffff;
-	float: left;
-	width: 200px;
-	height: 1000px;
+   background-color: #ffffff;
+   float: left;
+   width: 200px;
 }
 
 .footer {
-	background-color: #ffffff;
-	clear: both;
-	height: 100px;
+   background-color: #ffffff;
+   clear: both;
+   height: 100px;
 }
 .slideshow-container {
-	max-width: 1000px;
-	position: inherit;
+   max-width: 700px;
+   position: inherit;
+   margin: auto;
+}
+
+@media only screen and (max-width: 300px) {
+  
 }

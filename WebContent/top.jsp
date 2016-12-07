@@ -4,23 +4,82 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>STUDYHARD에 오신걸 환영합니다.</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<style>
+body {margin:0;}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+</style>
 </head>
 
 <body>
-	<img src="./image/logo.jpg" border="0" usemap="#ImageMap1">
-	<map name="ImageMap1">
-		<area shape="rect" coords="243, 16, 299, 37" href="/main.jsp" target="_parent">
-		<!-- home -->
-		<area shape="rect" coords="343, 17, 398, 36" href="/intro_room.jsp" target="_parent">
-		<!-- 스터디카페 -->
-		<area shape="rect" coords="442, 16, 520, 36" href="" target="_parent">
-		<!-- 예약 -->
-		<area shape="rect" coords="542, 16, 598, 36" href="" target="_parent">
-		<!-- 스터디 순서 -->
-		<area shape="rect" coords="640, 17, 697, 35" href="/UpdateAction1.do" target="_parent">
-		<!-- 마이페이지 -->
-		<area shape="rect" coords="760, 17, 790, 35" href="" target="_parent">
-		<!-- FAQ -->
-	</map>
+
+	<ul class="topnav" id="myTopnav">
+		<li><a class="active" href="/main.jsp">Home</a></li>
+		<li><a href="/intro_room.jsp">StudyCafe</a></li>
+		<li><a href="/">Reservation</a></li>
+		<li><a href="/">Rank</a></li>
+		<li><a href="/UpdateAction1.do" >MyPage</a></li>
+		<li><a href="">FAQ</a></li>
+		<li class="icon"><a href="javascript:void(0);"
+			style="font-size: 15px;" onclick="myFunction()">☰</a></li>
+	</ul>
+
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
 </body>
 </html>

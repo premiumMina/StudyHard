@@ -12,7 +12,7 @@
 			<jsp:include page="top.jsp"></jsp:include>
 		</div>
 		<div class="sideinfo">
-			<jsp:include page="left.jsp"></jsp:include>
+			<jsp:include page="login.jsp"></jsp:include>
 		</div>
 		<!-- 본문 -->
 		<div class="content" align="center">

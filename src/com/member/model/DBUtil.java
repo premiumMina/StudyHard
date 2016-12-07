@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DBUtil {
-	Connection conn = null;
+	Connection conn;
 	
 	public Connection getConnection() {
 		try {
