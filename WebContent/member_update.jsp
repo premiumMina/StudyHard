@@ -44,7 +44,7 @@
 			</table>
 			<br>
 
-			<form action="UpdateAction2.do" method="post">
+			<form action="UpdateAction2.do" method="post" id="join">
 				<table width="600" cellspacing="0" bordercolordark="white"
 					bordercolorlight="#CCCCCC" border="1" bordercolor="#CCCCCC"
 					align="center" height="283">

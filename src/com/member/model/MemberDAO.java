@@ -11,10 +11,10 @@ public class MemberDAO {
 	ResultSet rs;
 
 	public MemberDAO() {
-			DBUtil db = new DBUtil();
-			conn = db.getConnection();
+		DBUtil db = new DBUtil();
+		conn = db.getConnection();
 	}
-	
+
 	public int isMember(MemberBean member) {
 		String sql = "SELECT password FROM member WHERE id=?";
 		int result = -1;

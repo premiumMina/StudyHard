@@ -13,9 +13,8 @@
 }
 
 .content {
-   background-color: #ffffff;
-   position: inherit;
-   
+	background-color: #ffffff;
+	margin-left: 5cm;
 }
 
 .sideinfo {
