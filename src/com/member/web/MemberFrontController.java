@@ -80,7 +80,6 @@ public class MemberFrontController extends javax.servlet.http.HttpServlet implem
 			}
 
 		} else if (command.equals("/UpdateAction1.do")) { // 회원 수정 페이지에서 회원정보
-															// 불러오는 액션
 			action = new UpdateAction1();
 			try {
 				forward = action.execute(request, response);

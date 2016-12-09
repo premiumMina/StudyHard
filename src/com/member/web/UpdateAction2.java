@@ -25,6 +25,7 @@ public class UpdateAction2 implements Action {
 		if (result == false) {
 			forward.setRedirect(true);
 			forward.setPath("main.do");
+			
 			return forward;
 		}
 

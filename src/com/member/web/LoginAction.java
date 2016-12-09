@@ -35,7 +35,7 @@ public class LoginAction implements Action {
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
 			out.println("alert('아이디가 존재하지 않습니다.');");
-			out.println("location.href='login.do';");
+			out.println("location.href='main.do';");
 			out.println("</script>");
 			out.close();
 			return null;

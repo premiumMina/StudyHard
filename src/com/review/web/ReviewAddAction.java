@@ -17,7 +17,7 @@ public class ReviewAddAction implements Action {
 		try {
 			request.setCharacterEncoding("UTF-8");
 
-			board.setId(request.getParameter("id"));
+			board.setId(request.getParameter("name"));
 			board.setType(request.getParameter("room"));
 			board.setSubject(request.getParameter("subject"));
 			board.setContent(request.getParameter("content"));

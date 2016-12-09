@@ -28,9 +28,7 @@ public class ReviewFrontController extends javax.servlet.http.HttpServlet implem
 			// 리뷰목록으로 가도록...
 		}
 
-		if (forward.isRedirect())
-
-		{
+		if (forward.isRedirect()) {
 			response.sendRedirect(forward.getPath());
 		} else {
 			RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath());
