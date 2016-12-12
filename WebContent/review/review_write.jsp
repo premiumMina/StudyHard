@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
 <%
 	String name = (String) session.getAttribute("name");
 	if (name == "" || name == null) {
@@ -50,7 +51,6 @@
 				<input type="button" value="제출하기" onclick="check()" >
 				<input type="button" value="목록" onclick="javascript:location.href='/ReviewList.rw'">
 			</form>
-			
 		</div>
 		<div class="footer">
 			<jsp:include page="../bottom.jsp"></jsp:include>

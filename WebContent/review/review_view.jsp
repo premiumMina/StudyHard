@@ -2,8 +2,6 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="com.review.model.*"%>
 <%
-	String id = (String) session.getAttribute("id");
-	String name = (String) session.getAttribute("name");
 	ReviewBean board = (ReviewBean) request.getAttribute("boarddata");
 
 %>
@@ -26,7 +24,7 @@
 			<h2>회원 리뷰</h2>
 
 			<hr>
-				<label>작성자 : <%=name%><input type="hidden" id="name" name="name" value="<%=name%>" /></label><br> 
+				<label>작성자 : <%=board.getId()%></label><br> 
 				지점 선택 : <%=board.getType() %>
 				<br> 내용 <br>
 				<hr>

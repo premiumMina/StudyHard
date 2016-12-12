@@ -35,4 +35,16 @@
 		<url-pattern>*.rw</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<description>
+		</description>
+		<display-name>ReservationFrontController</display-name>
+		<servlet-name>ReservationFrontController</servlet-name>
+		<servlet-class>com.reservation.web.ReservationFrontController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReservationFrontController</servlet-name>
+		<url-pattern>*.rv</url-pattern>
+	</servlet-mapping>
+	
 </web-app>
