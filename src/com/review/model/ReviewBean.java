@@ -10,6 +10,15 @@ public class ReviewBean {
 	private String content;
 	private int readcount;
 	private Date date;
+	private String star;
+
+	public String getStar() {
+		return star;
+	}
+
+	public void setStar(String star) {
+		this.star = star;
+	}
 
 	public int getNum() {
 		return num;

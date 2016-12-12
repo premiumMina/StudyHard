@@ -16,17 +16,29 @@ public class ReviewFrontController extends javax.servlet.http.HttpServlet implem
 		String command = RequestURI.substring(contextPath.length());
 		ActionForward forward = null;
 		Action action = null;
-
-		if (command.equals("/ReviewWrite.rw")) {
+		
+		if (command.equals("/ReviewList.rw")) {
+			action = new ReviewListAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else if (command.equals("/ReviewWrite.rw")) {
 			action = new ReviewAddAction();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}else if(command.equals("/ReviewList.rw")){
-			// 리뷰목록으로 가도록...
-		}
+		} else if(command.equals("/ReviewDetail.rw")){
+			   action = new ReviewDetailAction();
+			   try{
+				   forward=action.execute(request, response);
+			   }catch(Exception e){
+				   e.printStackTrace();
+			   }
+		   }
 
 		if (forward.isRedirect()) {
 			response.sendRedirect(forward.getPath());

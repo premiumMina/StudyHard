@@ -4,6 +4,14 @@
 	MemberBean member = new MemberBean();
 	member = (MemberBean) request.getAttribute("member_update");
 	String id = (String) session.getAttribute("id");
+	String name = (String) session.getAttribute("name");
+	
+	if (name == "" || name == null) {
+		out.println("<script>");
+		out.println("alert('로그인 후 이용해주세요.');");
+		out.println("location.href='/main.do';");
+		out.println("</script>");
+	}else{
 %>
 <!DOCTYPE HTML>
 <HTML>
@@ -101,6 +109,7 @@
 		<div class="footer">
 			<jsp:include page="bottom.jsp"></jsp:include>
 		</div>
+		<%} %>
 	</div>
 </body>
 </html>

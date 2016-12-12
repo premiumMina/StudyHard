@@ -21,6 +21,7 @@ public class ReviewAddAction implements Action {
 			board.setType(request.getParameter("room"));
 			board.setSubject(request.getParameter("subject"));
 			board.setContent(request.getParameter("content"));
+			board.setStar(request.getParameter("points"));
 			
 
 			result = boarddao.boardInsert(board);
@@ -32,7 +33,7 @@ public class ReviewAddAction implements Action {
 			System.out.println("게시판 등록 완료");
 
 			forward.setRedirect(true);
-			forward.setPath("./ReviewList.rw");
+			forward.setPath("/ReviewList.rw");
 			return forward;
 
 		} catch (Exception ex) {
