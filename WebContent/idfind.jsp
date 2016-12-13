@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script language="javascript" src="js/idfind.js"></script>
 <title>STUDYHARD에 오신걸 환영합니다.</title>
@@ -28,7 +28,7 @@
 		</div>
 		<div class="content" align="center">
 			<form name="find1" id="find1" action="idfindAction.do" method="post">
-				<table width="600" cellspacing="0" bordercolordark="white" bordercolorlight="#CCCCCC" border="1" bordercolor="#CCCCCC" align="center" height="80">
+				<table width="60%" cellspacing="0" bordercolordark="white" bordercolorlight="#CCCCCC" border="1" bordercolor="#CCCCCC" align="center" height="80">
 
 					<tr>
 						<td colspan="2"><img src="/image/idfind.jpg" width="150" border=0></td>
@@ -54,7 +54,7 @@
 
 
 			<form name="find2" id="find2" action="pwfindAction.do" method="post">
-				<table width="600" cellspacing="0" bordercolordark="white" bordercolorlight="#CCCCCC" border="1" bordercolor="#CCCCCC" align="center" height="80">
+				<table width="60%" cellspacing="0" bordercolordark="white" bordercolorlight="#CCCCCC" border="1" bordercolor="#CCCCCC" align="center" height="80">
 
 					<tr>
 						<td colspan="2"><img src="/image/pwfind.jpg" width="150" border=0></td>

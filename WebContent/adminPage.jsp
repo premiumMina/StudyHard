@@ -17,8 +17,7 @@
       </div>
       <!-- 본문 -->
       <div class="content" align="center">
-         <jsp:include page="centerSlide.jsp"></jsp:include>
-         <jsp:include page="roomintro.jsp"></jsp:include>
+			
       </div>   
       <!-- 본문 끝 -->
       <div class="footer">
