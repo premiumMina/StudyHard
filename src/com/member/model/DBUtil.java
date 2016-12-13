@@ -25,18 +25,4 @@ public class DBUtil {
 		return conn;
 	}
 	
-	public static ResultSet findUser(Connection con, String uid) {
-		String sqlSt = "SELECT password FROM member WHERE id=";
-		Statement st;
-		try {
-			st = con.createStatement();
-
-			if (st.execute(sqlSt + "'" + uid + "'")) {
-				return st.getResultSet();
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
 }

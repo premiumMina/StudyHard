@@ -1,6 +1,7 @@
 package com.reservation.web;
 
 import java.io.IOException;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +19,13 @@ public class ReservationFrontController extends javax.servlet.http.HttpServlet i
 		
 		if (command.equals("/ReservationView.rv")) {
 			action = new ReservationViewAction();
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else if(command.equals("/ReservationRoom.rv")) {
+			action = new ReservationRoomAction();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
