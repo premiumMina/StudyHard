@@ -16,16 +16,18 @@
 	%>
 	<form action="LoginAction.do" method="post" name="loginform">
 		<div class="container">
-			<label><b>ID</b></label> <input type="text" placeholder="ID를 입력하세요"
-				name="id" id="id" required> <label><b>Password</b></label> <input
-				type="password" id="password" placeholder="Password를 입력하세요"
+			<label><b>ID</b></label> 
+			<input type="text" placeholder="ID를 입력하세요"
+				name="id" id="id" required> 
+			<label><b>Password</b></label> 
+			<input type="password" id="password" placeholder="Password를 입력하세요"
 				name="password" required>
 
 			<button type="submit">Login</button>
 		</div>
 	</form>
 
-	<div class="container" style="background-color: #f1f1f1">
+	<div class="container">
 		<form action="join.do" method="post">
 			<button type="submit">SignUp</button>
 		</form>
@@ -44,7 +46,7 @@
 			%>
 		<label><b><%=name%> 님 반갑습니다.</b></label>
 
-		<form action="/Logout.do" method="post"">
+		<form action="/Logout.do" method="post">
 			<button type="submit">Logout</button>
 		</form>
 

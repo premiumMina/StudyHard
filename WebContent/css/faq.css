@@ -1,0 +1,13 @@
+.question {
+    border-bottom: 1px #dcdcdc solid;
+    padding: 12px 8px 10px 8px;
+    overflow: auto;
+}
+
+.answer {
+    border-bottom: 1px solid #ddd;
+    background-color: #fafafa;
+    padding: 0px;
+    position: relative;
+    overflow: auto;
+}

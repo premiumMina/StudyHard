@@ -29,9 +29,7 @@ function next(arg, len, nextname) {
 		</div>
 
 		<div class="content" align="center">
-			<table width="600" cellspacing="0" bordercolordark="white"
-				bordercolorlight="#CCCCCC" border="1" bordercolor="#CCCCCC"
-				align="center" height="80">
+			<table>
 				<tr>
 					<td>2001년 4월 27일부터 2001년 1월 26일 개정 공포된 주민등록법에 따라 주민등록 생성기를
 						이용하거나 다른이의 주민등록번호를 도용하여 인터넷서비스에 가입하는 이용자의 경우 3년이하의 징역 또는 1천만원 이하의
@@ -40,11 +38,9 @@ function next(arg, len, nextname) {
 			</table>
 			<br>
 			<form action="/JoinAction.do" method="post" name="join" id="join">
-				<table width="600" cellspacing="0" bordercolordark="white"
-					bordercolorlight="#CCCCCC" border="1" bordercolor="#CCCCCC"
-					align="center" height="283">
+				<table>
 					<tr>
-						<td bgcolor="#EFEEEE">&nbsp;E-MAIL</td>
+						<td bgcolor="#EFEEEE">¤&nbsp;E-MAIL</td>
 						<td>
 							<p>
 								<input type="text" name="email" id="email" size="30" maxlength="30" style="height: 20px; border: 1px solid #ccc;">
@@ -55,7 +51,7 @@ function next(arg, len, nextname) {
 						</td>
 					</tr>
 					<tr>
-						<td bgcolor="#EFEEEE">&nbsp;패스워드</td>
+						<td bgcolor="#EFEEEE">¤&nbsp;패스워드</td>
 						<td>
 							<p>
 								<input type="password" name ="pw1" id ="pw1" size="20" maxlength="12" style="height: 20px; border: 1px solid #ccc;"><br>
@@ -64,7 +60,7 @@ function next(arg, len, nextname) {
 						</td>
 					</tr>
 					<tr>
-						<td bgcolor="#EFEEEE">&nbsp;패스워드확인</td>
+						<td bgcolor="#EFEEEE">¤&nbsp;패스워드확인</td>
 						<td>
 							<p>
 								<input type="password" name = "pw2" id = "pw2" size="20" maxlength="12" style="height: 20px; border: 1px solid #ccc;"><br>
@@ -73,7 +69,7 @@ function next(arg, len, nextname) {
 						</td>
 					</tr>
 					<tr>
-						<td bgcolor="#EFEEEE">&nbsp;이름</td>
+						<td bgcolor="#EFEEEE">¤&nbsp;이름</td>
 						<td>
 							<p>
 								<input type="text" name="uname" id="uname" size="20" maxlength="12" style="width: 150px; height: 20px; border: 1px solid #ccc;">
@@ -82,7 +78,7 @@ function next(arg, len, nextname) {
 					</tr>
 
 					<tr>
-						<td bgcolor="#EFEEEE">&nbsp;핸드폰</td>
+						<td bgcolor="#EFEEEE">¤&nbsp;핸드폰</td>
 						<td>
 							<p>
 								<input type="text" name = "phoneNum" id = "phoneNum" size="20" maxlength="12" style="height: 20px; border: 1px solid #ccc;"><br>

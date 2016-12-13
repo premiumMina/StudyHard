@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>STUDYHARD에 오신걸 환영합니다.</title>
-<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
 <style>
 body {margin:0;}
 ul.topnav {
@@ -61,12 +61,12 @@ ul.topnav li.icon {display: none;}
 <body>
 
 	<ul class="topnav" id="myTopnav">
-		<li><a class="active" href="/main.jsp">Home</a></li>
-		<li><a href="/intro_room.jsp">StudyCafe</a></li>
+		<li><a href="/main.jsp"><img src="./image/logo.jpg"></a></li>
+		<li><a href="/room.jsp">StudyCafe</a></li>
 		<li><a href="/">Reservation</a></li>
-		<li><a href="/">Rank</a></li>
+		<li><a href="/review.jsp">Rank</a></li>
 		<li><a href="/UpdateAction1.do" >MyPage</a></li>
-		<li><a href="">FAQ</a></li>
+		<li><a href="/faq1.jsp">FAQ</a></li>
 		<li class="icon"><a href="javascript:void(0);"
 			style="font-size: 15px;" onclick="myFunction()">☰</a></li>
 	</ul>

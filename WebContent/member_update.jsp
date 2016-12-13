@@ -10,7 +10,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>STUDYHARD에 오신걸 환영합니다.</title>
-<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="./js/check.js"></script>
 <script type="text/javascript">
@@ -22,7 +22,7 @@
 	}
 </script>
 </head>
-<body>
+<body>	
 	<div class="container">
 		<div class="header">
 			<jsp:include page="/top.jsp"></jsp:include>
@@ -31,9 +31,11 @@
 		<div class="sideinfo">
 			<jsp:include page="/login.jsp"></jsp:include>
 		</div>
-
+		
 		<div class="content" align="center">
-			<table width="600" cellspacing="0" bordercolordark="white" bordercolorlight="#CCCCCC" border="1" bordercolor="#CCCCCC" align="center" height="80">
+			<h2>마이페이지</h2>
+			<hr>
+			<table>
 				<tr>
 					<td>이용자 본인의 이름 및 주민등록번호를 정확히 입력해주시기 바랍니다.<br> 2001년 4월
 						27일부터 2001년 1월 26일 개정 공포된 주민등록법에 따라 주민등록 생성기를 이용하거나 다른이의 주민등록번호를
@@ -44,19 +46,16 @@
 			</table>
 			<br>
 
-			<form action="UpdateAction2.do" method="post">
-				<table width="600" cellspacing="0" bordercolordark="white"
-					bordercolorlight="#CCCCCC" border="1" bordercolor="#CCCCCC"
-					align="center" height="283">
+			<form action="UpdateAction2.do" method="post" id="join">
+				<table>
 					<tr>
-						<td width="100" bgcolor="#EFEEEE"><img
-							src="/image/bullet01.gif">&nbsp;E-MAIL</td>
+						<td bgcolor="#EFEEEE">¤&nbsp;E-MAIL</td>
 						<td width="500">
 							<p><input type="text" name="email" id="email" value="<%=member.getId()%>"></p>
 						</td>
 					</tr>
 					<tr>
-						<td bgcolor="#EFEEEE"><img src="/image/bullet01.gif">&nbsp;패스워드</td>
+						<td bgcolor="#EFEEEE">¤&nbsp;패스워드</td>
 						<td>
 							<p>
 								<input type="password" name="pw1" id="pw1" size="20"
@@ -67,7 +66,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td bgcolor="#EFEEEE"><img src="/image/bullet01.gif">&nbsp;패스워드확인
+						<td bgcolor="#EFEEEE">¤&nbsp;패스워드확인
 						</td>
 						<td>
 							<p>
@@ -79,7 +78,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td bgcolor="#EFEEEE"><img src="/image/bullet01.gif">&nbsp;이름</td>
+						<td bgcolor="#EFEEEE">¤&nbsp;이름</td>
 						<td>
 							<p>
 								<input type="text" name="uname" id="uname" value="<%=member.getName()%>">
@@ -87,7 +86,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td bgcolor="#EFEEEE"><img src="/image/bullet01.gif">&nbsp;핸드폰</td>
+						<td bgcolor="#EFEEEE">¤&nbsp;핸드폰</td>
 						<td><input type="text" name="phoneNum" id="phoneNum" value="<%=member.getPhoneNumber()%>"></td>
 					</tr>
 					<tr>
