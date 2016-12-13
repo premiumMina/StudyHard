@@ -3,7 +3,7 @@
 <html>
 	<head>
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-	<title>STUDYHARD에 오신걸 환영합니다.</title>
+	
 	</head>
 	
 	<body>
