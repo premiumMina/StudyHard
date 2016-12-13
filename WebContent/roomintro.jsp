@@ -26,7 +26,7 @@
 			<img class="img-responsive" src="./image/intro1.jpg">
 		<h3>공통 사항 </h3>
 		<hr>
-			<br><strong>1</strong>. 스터디룸 최초 취식공간 보유, 라면 김밥등의 인스턴트음식 취식 가능 ( 슈퍼스타트에서 판매하는 제품에 한함 ) 
+			<br><strong>1</strong>. 스터디룸 최초 취식공간 보유, 라면 김밥등의 인스턴트음식 취식 가능 
 			<br>
 			<br><strong>2</strong>. 고급 머신에서 추출하는 드립 커피를 무제한 제공
 			<br>
