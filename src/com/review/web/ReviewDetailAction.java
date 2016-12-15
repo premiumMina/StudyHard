@@ -17,7 +17,7 @@ public class ReviewDetailAction implements Action {
 		boarddata = boarddao.getDetail(num);
 
 		if (boarddata == null) {
-			System.out.println("ìƒì„¸ë³´ê¸° ì‹¤íŒ¨");
+			System.out.println("»ó¼¼º¸±â ½ÇÆĞ");
 			return null;
 		}
 

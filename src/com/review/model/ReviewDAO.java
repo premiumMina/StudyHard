@@ -112,7 +112,7 @@ public class ReviewDAO {
 			
 			return board;
 		}catch(Exception ex){
-			System.out.println("getDetail 에러 : " + ex);
+			System.out.println("getDetail �뿉�윭 : " + ex);
 		}finally{
 			if(rs!=null)try{rs.close();}catch(SQLException ex){}
 			if(pstmt !=null)try{pstmt.close();}catch(SQLException ex){}

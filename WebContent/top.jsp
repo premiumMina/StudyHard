@@ -76,7 +76,7 @@ ul.topnav li.icon {
 		<li><a href="/main.jsp">Home</a></li>
 		<li><a href="/room.jsp">StudyCafe</a></li>
 		<li><a href="/reservation/reservation_view.jsp">Reservation</a></li>
-		<li><a href="/ReviewList.rw">Rank</a></li>
+		<li><a href="/ReviewList.rw">Review</a></li>
 		<li><a href="/UpdateAction1.do" >MyPage</a></li>
 		<li><a href="/faq1.jsp">FAQ</a></li>
 		<li class="icon"><a href="javascript:void(0);"

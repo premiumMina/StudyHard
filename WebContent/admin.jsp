@@ -9,27 +9,15 @@
 <link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
 <style>
-table, td, th {
-	border: 1px solid #ddd;
-	text-align: left;
-}
 
-table {
-	border-collapse: collapse;
-	width: 100%;
-}
-
-th, td {
-	padding: 15px;
-}
 </style>
 <body>
 	<div class="container">
 		<div class="header">
-			<jsp:include page="top.jsp"></jsp:include>
+			<jsp:include page="/top.jsp"></jsp:include>
 		</div>
 		<div class="sideinfo">
-			<jsp:include page="login.jsp"></jsp:include>
+			<jsp:include page="/login.jsp"></jsp:include>
 		</div>
 		<!-- 본문 -->
 		<div class="content" align="center">
@@ -37,64 +25,103 @@ th, td {
 			<hr>
 			<table>
 				<tr>
-					<th>스터디룸</th>
-					<th>사용 인원</th>
-					<th>이용날짜</th>
+					<th>예약번호</th>
+					<th>예약자 명</th>
+					<th>룸</th>
+					<th>예약날짜</th>
 					<th>이용시간</th>
+					<th>사용 인원</th>
 					<th>가격</th>
 					<th>예약현황</th>
-					<th>예약자</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>완료</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>대기</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>취소</td>
+				</tr>
+			</table>
+			<h2>예약대기</h2>
+			<hr>
+			<table>
+				<tr>
 					<th>예약번호</th>
+					<th>예약자 명</th>
+					<th>룸</th>
+					<th>예약날짜</th>
+					<th>이용시간</th>
+					<th>사용 인원</th>
+					<th>가격</th>
+					<th>예약변경</th>
 				</tr>
 				<tr>
-					<td>201</td>
-					<td>5</td>
-					<td>2016.12.13</td>
-					<td>2</td>
-					<td>5000</td>
-					<td>예약됨</td>
-					<td>김윤민</td>
-					<td>11</td>
-				</tr>
-				<tr>
-					<td>201</td>
-					<td>5</td>
-					<td>2016.12.13</td>
-					<td>2</td>
-					<td>5000</td>
-					<td>예약됨</td>
-					<td>김윤민</td>
-					<td>11</td>
-				</tr>
-				<tr>
-					<td>201</td>
-					<td>5</td>
-					<td>2016.12.13</td>
-					<td>2</td>
-					<td>5000</td>
-					<td>예약됨</td>
-					<td>김윤민</td>
-					<td>11</td>
-				</tr>
-				<tr>
-					<td>201</td>
-					<td>5</td>
-					<td>2016.12.13</td>
-					<td>2</td>
-					<td>5000</td>
-					<td>예약됨</td>
-					<td>김윤민</td>
-					<td>11</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+					<input type="submit" value="취소" onclick="#"> 
+					<input type="submit" value="예약" onclick="#">
+					</td>
 				</tr>
 			</table>
 			<h2>예약취소</h2>
 			<hr>
-			<h2>예약대기</h2>
-			<hr>
+			<table>
+				<tr>
+					<th>예약번호</th>
+					<th>예약자 명</th>
+					<th>룸</th>
+					<th>예약날짜</th>
+					<th>이용시간</th>
+					<th>사용 인원</th>
+					<th>가격</th>
+					<th>예약현황</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>취소</td>
+				</tr>
+			</table>
 		</div>
+		<br>
+		<hr>
 		<!-- 본문 끝 -->
 		<div class="footer">
-			<jsp:include page="bottom1.jsp"></jsp:include>
+			<jsp:include page="/bottom1.jsp"></jsp:include>
 		</div>
 	</div>
 </body>

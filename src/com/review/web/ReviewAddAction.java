@@ -27,10 +27,10 @@ public class ReviewAddAction implements Action {
 			result = boarddao.boardInsert(board);
 
 			if (result == false) {
-				System.out.println("ê²Œì‹œíŒ ë“±ë¡ ì‹¤íŒ¨");
+				System.out.println("°Ô½ÃÆÇ µî·Ï ½ÇÆĞ");
 				return null;
 			}
-			System.out.println("ê²Œì‹œíŒ ë“±ë¡ ì™„ë£Œ");
+			System.out.println("°Ô½ÃÆÇ µî·Ï ¿Ï·á");
 
 			forward.setRedirect(true);
 			forward.setPath("/ReviewList.rw");

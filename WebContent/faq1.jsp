@@ -45,7 +45,7 @@ ul.tab li a {
 			<jsp:include page="login.jsp"></jsp:include>
 		</div>
 		<!-- 본문 -->
-		<div class="content" align="center">
+		<div class="content">
 
 			<h2>FAQ</h2>
 
@@ -66,7 +66,7 @@ ul.tab li a {
 			</ul>
 			<ul class="tab">
 				<li><a href="javascript:void(0)" class="tablinks"
-					onclick="openQuestion(event, 'question4')">dddd</a></li>
+					onclick="openQuestion(event, 'question4')">예약 대기를 걸 수 있나요?</a></li>
 			</ul>
 
 			<div id="question1" class="tabcontent">
@@ -83,13 +83,13 @@ ul.tab li a {
 			</div>
 			
 			<div id="question4" class="tabcontent">
-				<p>ddddd</p>
+				<p>가능합니다. 대기를 걸어 놓으면 30분 안에 취소 예약 여부를 확인할 수 있습니다.</p>
 			</div>
-			
-			<div class="footer">
+		<hr>
+	</div>
+	
+	<div class="footer">
 				<jsp:include page="bottom1.jsp"></jsp:include>
-			</div>
-		</div>
 	</div>
 
 	<script>

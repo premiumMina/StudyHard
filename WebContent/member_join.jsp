@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,13 +9,12 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="./js/check.js"></script>
 <script type="text/javascript">
-
-function next(arg, len, nextname) {
-	if ($(arg).val().length == len) {
-		nextname.focus();
-		return;
+	function next(arg, len, nextname) {
+		if ($(arg).val().length == len) {
+			nextname.focus();
+			return;
+		}
 	}
-}
 </script>
 </head>
 
@@ -28,7 +28,9 @@ function next(arg, len, nextname) {
 			<jsp:include page="./login.jsp"></jsp:include>
 		</div>
 
-		<div class="content" align="center">
+		<div class="content">
+		<h3>회원가입</h3>
+		<hr>
 			<table>
 				<tr>
 					<td>2001년 4월 27일부터 2001년 1월 26일 개정 공포된 주민등록법에 따라 주민등록 생성기를
@@ -43,27 +45,30 @@ function next(arg, len, nextname) {
 						<td bgcolor="#EFEEEE">¤&nbsp;E-MAIL</td>
 						<td>
 							<p>
-								<input type="text" name="email" id="email" size="30" maxlength="30" style="height: 20px; border: 1px solid #ccc;">
-								<img src="../image/btn_check_id.gif" onclick="checkEvents()" border=0 style="cursor: hand;"><br>
-								<input type="hidden" name ="idcheck" id = "idcheck" ><br>
-									※ 본인의 정확한 이메일을 입력해주세요.
+								<input type="text" name="email" id="email" size="30"
+									maxlength="30" style="height: 20px; border: 1px solid #ccc;">
+								<input type="submit" value="▶ 아이디 중복확인" onclick="checkEvents()"><br> 
+								<input type="hidden" name="idcheck" id="idcheck"><br> ※
+								본인의 정확한 이메일을 입력해주세요.
 							</p>
 						</td>
 					</tr>
 					<tr>
-						<td bgcolor="#EFEEEE">¤&nbsp;패스워드</td>
+						<td bgcolor="#EFEEEE">¤&nbsp;비빌번호</td>
 						<td>
 							<p>
-								<input type="password" name ="pw1" id ="pw1" size="20" maxlength="12" style="height: 20px; border: 1px solid #ccc;"><br>
+								<input type="password" name="pw1" id="pw1" size="20"
+									maxlength="12" style="height: 20px; border: 1px solid #ccc;"><br>
 								※ 4~12자 이하로 입력합니다.
 							</p>
 						</td>
 					</tr>
 					<tr>
-						<td bgcolor="#EFEEEE">¤&nbsp;패스워드확인</td>
+						<td bgcolor="#EFEEEE">¤&nbsp;비밀번호 확인</td>
 						<td>
 							<p>
-								<input type="password" name = "pw2" id = "pw2" size="20" maxlength="12" style="height: 20px; border: 1px solid #ccc;"><br>
+								<input type="password" name="pw2" id="pw2" size="20"
+									maxlength="12" style="height: 20px; border: 1px solid #ccc;"><br>
 								※ 앞에서 입력하신 비밀번호를 한번 더 입력합니다.
 							</p>
 						</td>
@@ -72,7 +77,9 @@ function next(arg, len, nextname) {
 						<td bgcolor="#EFEEEE">¤&nbsp;이름</td>
 						<td>
 							<p>
-								<input type="text" name="uname" id="uname" size="20" maxlength="12" style="width: 150px; height: 20px; border: 1px solid #ccc;">
+								<input type="text" name="uname" id="uname" size="20"
+									maxlength="12"
+									style="width: 150px; height: 20px; border: 1px solid #ccc;">
 							</p>
 						</td>
 					</tr>
@@ -81,18 +88,17 @@ function next(arg, len, nextname) {
 						<td bgcolor="#EFEEEE">¤&nbsp;핸드폰</td>
 						<td>
 							<p>
-								<input type="text" name = "phoneNum" id = "phoneNum" size="20" maxlength="12" style="height: 20px; border: 1px solid #ccc;"><br>
+								<input type="text" name="phoneNum" id="phoneNum" size="20"
+									maxlength="12" style="height: 20px; border: 1px solid #ccc;"><br>
 							</p>
 						</td>
 					</tr>
-					<tr>
-						<td width="600" colspan="2" align="center">
-							<input type="button" id = "m_join" value="회원가입" onclick="signUp()" />
-							<input type="reset" value="재입력" />
-						</td>
-					</tr>
 				</table>
+				<br>
+				<input type="button" id="m_join" value="회원가입" onclick="signUp()" />
+				<input type="reset" value="재입력" />
 			</form>
+			<hr>
 		</div>
 		<div class="footer">
 			<jsp:include page="bottom1.jsp"></jsp:include>

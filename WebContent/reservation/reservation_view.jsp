@@ -31,7 +31,7 @@
 		
 		<div class="content">
 			<h2>예약하기</h2>
-			<br>
+			<hr>
 			지점 :
 			<select name="type" id="type" size="1">
 				<option value="송파">송파센터</option>

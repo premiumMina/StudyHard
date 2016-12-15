@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%
 	String id = (String) session.getAttribute("id");
 	String name = (String) session.getAttribute("name");
@@ -16,11 +17,9 @@
 	%>
 	<form action="LoginAction.do" method="post" name="loginform">
 		<div class="container">
-			<label><b>ID</b></label> 
-			<input type="text" placeholder="ID를 입력하세요"
-				name="id" id="id" required> 
-			<label><b>Password</b></label> 
-			<input type="password" id="password" placeholder="Password를 입력하세요"
+			<label><b>ID</b></label> <input type="text" placeholder="ID를 입력하세요"
+				name="id" id="id" required> <label><b>Password</b></label> <input
+				type="password" id="password" placeholder="Password를 입력하세요"
 				name="password" required>
 
 			<button type="submit">Login</button>
@@ -33,6 +32,7 @@
 		</form>
 		<span>Forgot <a href="/idfind.do">password?</a></span>
 	</div>
+
 	<%
 		} else {
 	%>
