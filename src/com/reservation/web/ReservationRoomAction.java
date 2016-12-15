@@ -20,9 +20,11 @@ public class ReservationRoomAction implements Action {
 			bean.setType(request.getParameter("type"));
 			bean.setRoomname(Integer.parseInt(request.getParameter("room")));
 			bean.setStartusingtime(Integer.parseInt(request.getParameter("startusingtime")));
+			bean.setEndusingtime(Integer.parseInt(request.getParameter("endusingtime")));
 			bean.setState(request.getParameter("state"));
 			bean.setPrice(Integer.parseInt(request.getParameter("price")));
 			bean.setUser(request.getParameter("name"));
+			bean.setUsingdate(request.getParameter("usingdate"));
 			
 			result = reservationdao.reservationInsert(bean);
 

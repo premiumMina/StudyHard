@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.member.model.DBUtil;
 
@@ -30,16 +32,18 @@ public class ReservationDAO {
 			else
 				id = 1;
 			sql = "insert into " + bean.getType()
-					+ "(roomname, peoplenum, usingtime, price, state, user, id,date) values(?,?,?,?,?,?,?,now())";
+					+ "(roomname, peoplenum, startusingtime, endusingtime, price, state, user, id, usingdate, date) values(?,?,?,?,?,?,?,?,?,now())";
 
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, bean.getRoomname());
 			pstmt.setInt(2, bean.getPeopleNum());
 			pstmt.setInt(3, bean.getStartusingtime());
-			pstmt.setInt(4, bean.getPrice());
-			pstmt.setString(5, bean.getState());
-			pstmt.setString(6, bean.getUser());
-			pstmt.setInt(7, id);
+			pstmt.setInt(4, bean.getEndusingtime());
+			pstmt.setInt(5, bean.getPrice());
+			pstmt.setString(6, bean.getState());
+			pstmt.setString(7, bean.getUser());
+			pstmt.setInt(8, id);
+			pstmt.setString(9, bean.getUsingdate());
 
 			int result = pstmt.executeUpdate();
 			if (result == 0)
@@ -54,5 +58,42 @@ public class ReservationDAO {
 		}
 		
 		return false;
+	}
+	
+	public List getDetail(String type, int peopleNum, String usingdate) throws Exception {
+		List<ReservationBean> list = new ArrayList<ReservationBean>();
+		String people = "";
+		if (peopleNum >= 2 && peopleNum <= 4) {
+			people = "1%";
+		} else if (peopleNum >= 5 && peopleNum <= 7) {
+			people = "2%";
+		} else {
+			people = "3%";
+		}
+		try {
+			pstmt = conn.prepareStatement("select roomname, date, startusingtime, endusingtime, price, state, user, id, usingdate from studyDB." + type + " WHERE roomname LIKE "+"'"+ people +"' and "+"usingdate='"+usingdate+"'");
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				ReservationBean bean = new ReservationBean();
+				bean.setRoomname(rs.getInt("roomname"));
+				bean.setDate(rs.getString("date"));
+				bean.setStartusingtime(rs.getInt("startusingtime"));
+				bean.setEndusingtime(rs.getInt("endusingtime"));
+				bean.setPrice(rs.getInt("price"));
+				bean.setState(rs.getString("state"));
+				bean.setUser(rs.getString("user"));
+				bean.setId(rs.getInt("id"));
+				bean.setUsingdate(rs.getString("usingdate"));
+				list.add(bean);
+			}
+			return list;
+		}catch(Exception ex){
+			System.out.println("getDetail 에러 : " + ex);
+		}finally{
+			if(rs!=null)try{rs.close();}catch(SQLException ex){}
+			if(pstmt !=null)try{pstmt.close();}catch(SQLException ex){}
+		}
+		return null;
 	}
 }

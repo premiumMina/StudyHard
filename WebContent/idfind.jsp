@@ -17,7 +17,7 @@
 	<div class="container">
 
 		<!--윗부분-->
-		<div class="top">
+		<div class="header">
 			<jsp:include page="/top.jsp"></jsp:include>
 		</div>
 		
