@@ -7,11 +7,6 @@
    position: inherit;
 }
 
-.header {
-   background-color: #ffffff;
-   height: 100px;
-}
-
 .content  {
 	background-color: #ffffff;
 	margin-left: 8cm;
@@ -24,10 +19,11 @@
    width: 200px;
 }
 
-.footer {
+footer {
    background-color: #ffffff;
    clear: both;
    height: 100px;
+   text-align: center
 }
 .slideshow-container {
    max-width: 700px;
@@ -60,9 +56,10 @@
   }
 
 .img-responsive {
-  display: block;
+  width: 100%;
   max-width: 700px;
   height: auto;
+  display: block;
 }
 
 @media (min-width: 1200px) {
@@ -74,4 +71,6 @@
 @media only screen and (max-width: 300px) {
   
 }
+
+
 

@@ -4,11 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="/css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script language="javascript" src="js/idfind.js"></script>
 <title>STUDYHARD에 오신걸 환영합니다.</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
+
 
 <body>
 	<!--전체로 묵어주는 역할을 한다-->
@@ -86,7 +88,7 @@
 		</div>
 		
 		<div class="footer">
-			<jsp:include page="/bottom.jsp"></jsp:include>
+			<jsp:include page="bottom1.jsp"></jsp:include>
 		</div>
 		
 	</div>

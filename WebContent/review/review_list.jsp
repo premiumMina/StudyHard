@@ -28,6 +28,8 @@
 			<jsp:include page="../login.jsp"></jsp:include>
 		</div>
 		<div class="content">
+			<h2>이용후기</h2>
+			<br>
 			<!-- 게시판 리스트 -->
 			<table>
 				<tr align="center" valign="middle" bordercolor="#333333"
@@ -77,10 +79,12 @@
 				<%} %>
 				
 			</table>
+				<br>
+				<br>
 				<input type="submit" value="글쓰기" onclick="javascript:location.href='/review/review_write.jsp'">
 		</div>
 		<div class="footer">
-			<jsp:include page="../bottom.jsp"></jsp:include>
+			<jsp:include page="/bottom1.jsp"></jsp:include>
 		</div>
 	</div>
 </body>

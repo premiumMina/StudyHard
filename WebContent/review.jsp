@@ -35,7 +35,7 @@
 			</form>
 			<input type="submit" value="제출하기">
 			<div class="footer">
-				<jsp:include page="bottom.jsp"></jsp:include>
+				<jsp:include page="bottom1.jsp"></jsp:include>
 			</div>
 		</div>
 	</div>

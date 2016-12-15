@@ -2,9 +2,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<link rel="stylesheet" type="text/css" href="../css/style.css" />
-	
-	</head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>STUDYHARD에 오신걸 환영합니다.</title>
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+</head>
 	
 	<body>
 		<h2>회의/스터디/조모임/승무원/강의/모임전문공간</h2>
