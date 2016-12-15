@@ -1,5 +1,8 @@
 package com.reservation.web;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -14,8 +17,15 @@ public class ReservationViewAction implements Action {
 		ReservationDAO reservationdao = new ReservationDAO();
 		bean.setPeopleNum(Integer.parseInt(request.getParameter("peoplenum")));
 		bean.setType(request.getParameter("type"));
-
-		request.setAttribute("reservationdata", bean);
+		bean.setUsingdate(request.getParameter("usingdate"));
+		request.setAttribute("beandata", bean);
+		
+		List beanlist = new ArrayList();
+		beanlist = reservationdao.getDetail(bean.getType(), bean.getPeopleNum(), bean.getUsingdate());
+		request.setAttribute("beanlist", beanlist);
+		
+		
+		
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
 		forward.setPath("/reservation/reservation_view2.jsp");

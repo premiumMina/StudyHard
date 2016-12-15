@@ -32,7 +32,7 @@ public class ReservationFrontController extends javax.servlet.http.HttpServlet i
 				e.printStackTrace();
 			}
 		}
-
+		
 		if (forward.isRedirect()) {
 			response.sendRedirect(forward.getPath());
 		} else {

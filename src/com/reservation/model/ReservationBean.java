@@ -11,6 +11,15 @@ public class ReservationBean {
 	private String state;
 	private String user;
 	private int id;
+	private String usingdate;
+
+	public String getUsingdate() {
+		return usingdate;
+	}
+
+	public void setUsingdate(String usingdate) {
+		this.usingdate = usingdate;
+	}
 
 	public int getRoomname() {
 		return roomname;

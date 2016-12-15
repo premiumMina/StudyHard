@@ -18,6 +18,16 @@
 <script src="../js/reservationview.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.23/themes/base/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+<link rel="stylesheet"
+	href="http://jqueryui.com/resources/demos/style.css">
+<script>
+	$(function() {
+		$("#datepicker").datepicker();
+	});
+</script>
 </head>
 <body>
 	<div class="container">
@@ -34,8 +44,8 @@
 			<hr>
 			지점 :
 			<select name="type" id="type" size="1">
-				<option value="송파">송파센터</option>
-				<option value="돈암">돈암센터</option>
+				<option value="songpa">송파센터</option>
+				<option value="don">돈암센터</option>
 				<option value="방이">방이센터</option>
 				<option value="서울대입구">서울대입구역센터</option>
 				<option value="공릉">공릉센터</option>
@@ -44,6 +54,8 @@
 			인원 :
 			<input type="text" id="peoplenum" name="peoplenum" style="height:10px; width:80px">
 			<br>
+			<b>예약 날짜를 선택하세요.</b>
+			<input type="text" id="datepicker" name="datepicker">
 			<input type="button" value="예약가능여부 확인하기" onclick="show()" >
 			<hr>
 			<div id="result"></div>

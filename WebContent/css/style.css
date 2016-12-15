@@ -2,9 +2,6 @@
 
 .container {
    background-color: #ffffff;
-   max-width: 0 auto;
-   margin: 0 auto;
-   position: inherit;
 }
 
 .content  {
