@@ -2,13 +2,13 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="com.reservation.model.*"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="java.util.Date"%>
-<%@ page import="java.util.Calendar"%>
+<%@ page import="java.util.*"%>
 <%
 	String name = (String) session.getAttribute("name");
-	ReservationBean bean = (ReservationBean) request.getAttribute("reservationdata");
+	ReservationBean bean = (ReservationBean) request.getAttribute("beandata");
 	int peoplenum = bean.getPeopleNum();
 	String type = bean.getType();
+	List beanList = (List) request.getAttribute("beanlist");
 %>
 <!DOCTYPE html>
 <html>
@@ -16,26 +16,33 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>STUDYHARD에 오신걸 환영합니다.</title>
 <script src="../js/reservationview.js"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.23/themes/base/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+<link rel="stylesheet"
+	href="http://jqueryui.com/resources/demos/style.css">
+<script>
+	$(function() {
+		$("#datepicker").datepicker();
+	});
+</script>
 <%
+	int action = 0; //up(1) down(0)
+	int currYear = 0;
+	int currMonth = 0;
+	String boxSize = "70";
 
-int action = 0; //up(1) down(0)
-int currYear = 0;
-int currMonth = 0;
-String boxSize = "70";
+	Calendar c = Calendar.getInstance();
+	Calendar cal = Calendar.getInstance();
 
-Calendar c = Calendar.getInstance();
-Calendar cal = Calendar.getInstance();
+	if (request.getParameter("action") == null) {
 
-if(request.getParameter("action") == null) {
-    
-     currMonth = c.get(Calendar.MONTH);
-     currYear = c.get(Calendar.YEAR);
-     cal.set(currYear,currMonth,1);
-    
-}
+		currMonth = c.get(Calendar.MONTH);
+		currYear = c.get(Calendar.YEAR);
+		cal.set(currYear, currMonth, 1);
+
+	}
 %>
 
 <%!
@@ -112,6 +119,7 @@ table#calendar td.toDayColor {
 </style>
 </head>
 <body bgcolor='white'>
+
 	<h4><%=getTitle(cal)%></h4>
 				<table id="calendar">
 					<tr>
@@ -178,7 +186,8 @@ table#calendar td.toDayColor {
 			예약자 <input type="text" id="name" name="name" value="<%=name%>" />
 			예약인원  <input type="text" id="peoplenum" name="peoplenum" value="<%=peoplenum%>" />
 			예약지점 <input type="text" id="type" name="type" value="<%=type%>" />
-			<table id="reserve">
+			예약날짜  <input type="text" id="usingdate" name="usingdate" value="<%=bean.getUsingdate()%>" />
+		<table id="reserve">
 			<tr align="center">
 				<td>방</td>
 				<td>
@@ -201,12 +210,15 @@ table#calendar td.toDayColor {
 				</select> <%} %>
 				</td>
 			</tr>
+			<tr>
+			</tr>
+
 
 			<tr align="center">
 				<td>이용시간</td>
-				<td>
-					시작 시간<input type="text" name="startusingtime" id="startusingtime"> 
-					종료 시간<input type="text" name="endusingtime" id="endusingtime">
+				<td>시작 시간<input type="text" name="startusingtime"
+					id="startusingtime"> 종료 시간<input type="text"
+					name="endusingtime" id="endusingtime">
 				</td>
 			</tr>
 
@@ -220,9 +232,8 @@ table#calendar td.toDayColor {
 
 			<tr align="center">
 				<td>가격</td>
-				<td>
-					<input type="hidden" id=price name="price" value="<%=peoplenum*1000%>" />
-					<label id="price"><%=peoplenum*1000%></label>
+				<td><input type="hidden" id=price name="price"
+					value="<%=peoplenum*1000%>" /> <label id="price"><%=peoplenum*1000%></label>
 				</td>
 			</tr>
 		</table>
@@ -230,6 +241,63 @@ table#calendar td.toDayColor {
 	</form>
 	<hr>
 	<h3>예약 현황</h3>
+	<div class="reservationstate">
+		<table>
+			<tr align="center" valign="middle" bordercolor="#333333"
+				bgcolor="#f7f7f7">
+				<td width=70 height="26">
+					<div align="center">
+						<font color="gray">예약날짜</font>
+					</div>
+				</td>
+				<td width="70">
+					<div align="center">
+						<font color="gray">센터</font>
+					</div>
+				</td>
+				<td width=70>
+					<div align="center">
+						<font color="gray">예약자</font>
+					</div>
+				</td>
+				<td width=70>
+					<div align="center">
+						<font color="gray">예약상태</font>
+					</div>
+				</td>
+				<td width=70>
+					<div align="center">
+						<font color="gray">방번호</font>
+					</div>
+				</td>
+				<td width=70>
+					<div align="center">
+						<font color="gray">시작시간</font>
+					</div>
+				</td>
+				<td width=70>
+					<div align="center">
+						<font color="gray">끝날시간</font>
+					</div>
+				</td>
+			</tr>
+
+			<%
+				for (int i = 0; i < beanList.size(); i++) {
+					ReservationBean reservationstate = (ReservationBean) beanList.get(i);
+			%>
+			<tr>
+				<td><%=reservationstate.getDate()%></td>
+				<td><%=type%></td>
+				<td><%=reservationstate.getUser()%></td>
+				<td><%=reservationstate.getState()%></td>
+				<td><%=reservationstate.getRoomname()%></td>
+				<td><%=reservationstate.getStartusingtime()%></td>
+				<td><%=reservationstate.getEndusingtime()%></td>
+			</tr>
+			<%} %>
+		</table>
+	</div>
 	<hr>
 	<h3>예약 대기</h3>
 	<br>

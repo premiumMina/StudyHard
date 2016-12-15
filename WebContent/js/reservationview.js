@@ -1,6 +1,8 @@
 function show() {
 	peoplenum = $('#peoplenum').val();
 	type = $('#type').val();
+	usingdate = $('#datepicker').val();
+
 	var r1 = "[0123456789]";
 	if (!peoplenum.substr(0, 1).match(r1)) {
 		alert("올바른 값을 입력해주세요.");
@@ -12,7 +14,8 @@ function show() {
 			type : 'POST', /* GET과 POST의 차이는? */
 			data : {
 				"peoplenum" : peoplenum,
-				"type" : type
+				"type" : type,
+				"usingdate" : usingdate
 			},
 			context : this,
 
@@ -25,9 +28,10 @@ function show() {
 				console.log(data);
 			}
 		})
+		
 	}
-	
 }
+
 function sendReservation() {
 	peoplenum = $('#peoplenum').val()
 	type = $('#type').val();
@@ -39,3 +43,4 @@ function sendReservation() {
 
 	$('#reservationform').submit();
 }
+
