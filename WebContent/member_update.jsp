@@ -40,7 +40,7 @@
 			<jsp:include page="/login.jsp"></jsp:include>
 		</div>
 		
-		<div class="content" align="center">
+		<div class="content">
 			<h2>마이페이지</h2>
 			<hr>
 			<table>
@@ -55,7 +55,7 @@
 			<br>
 
 			<form action="UpdateAction2.do" method="post" id="join">
-				<table>
+				<table id="update">
 					<tr>
 						<td bgcolor="#EFEEEE">¤&nbsp;E-MAIL</td>
 						<td width="500">
@@ -97,13 +97,12 @@
 						<td bgcolor="#EFEEEE">¤&nbsp;핸드폰</td>
 						<td><input type="text" name="phoneNum" id="phoneNum" value="<%=member.getPhoneNumber()%>"></td>
 					</tr>
-					<tr>
-						<td width="600" colspan="2" align="center">
-							<input type="button" id = "m_join" value="정보수정" onclick="signUp()" class="bu">
-							<input type="reset" value="재입력" class="bu"></td>
-					</tr>
 				</table>
+				<br>
+				<input type="button" id = "m_join" value="정보수정" onclick="signUp()" class="bu">
+				<input type="reset" value="재입력" class="bu">
 			</form>
+			<hr>
 		</div>
 		<div class="footer">
 			<jsp:include page="bottom1.jsp"></jsp:include>

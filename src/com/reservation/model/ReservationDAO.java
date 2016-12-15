@@ -51,7 +51,7 @@ public class ReservationDAO {
 
 			return true;
 		} catch (Exception ex) {
-			System.out.println("reservationInsert ÏóêÎü¨ : " + ex);
+			System.out.println("reservationInsert ø°∑Ø : " + ex);
 		} finally {
 			if(rs!=null) try{rs.close();}catch(SQLException ex){}
 			if(pstmt!=null) try{pstmt.close();}catch(SQLException ex){}

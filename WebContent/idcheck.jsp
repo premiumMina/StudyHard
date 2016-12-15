@@ -1,5 +1,5 @@
-<%@ page language="java" import="java.sql.*, com.member.model.*" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" import="java.sql.*, com.member.model.*" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
 <%
 	String id = request.getParameter("id");
@@ -17,15 +17,15 @@
 	rs = pstmt.executeQuery();
 
 	if (rs.next()) {
-		out.println("<center>¾ÆÀÌµğ°¡ Á¸ÀçÇÕ´Ï´Ù");
-		out.println("<br><input type=button value=´İ±â onclick=window.close();>");
+		out.println("<center>ì•„ì´ë””ê°€ ì¡´ì¬í•©ë‹ˆë‹¤");
+		out.println("<br><input type=button value=ë‹«ê¸° onclick=window.close();>");
 		out.println("<script>opener.document.join.idchkhd.value='';");
 		out.println("opener.document.join.id.value='';");
 		out.println("</script>");
 
 	} else {
 		out.println("<script language='javascript'>");
-		out.println("alert('»ç¿ëÇÒ ¼ö ÀÖ´Â ¾ÆÀÌµğ ÀÔ´Ï´Ù.');");
+		out.println("alert('ì‚¬ìš©í•  ìˆ˜ ìˆëŠ” ì•„ì´ë”” ì…ë‹ˆë‹¤.');");
 		out.println("window.close()");
 		out.println("</script>");
 	}

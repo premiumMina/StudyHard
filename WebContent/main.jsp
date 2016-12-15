@@ -17,7 +17,7 @@
          <jsp:include page="login.jsp"></jsp:include>
       </div>
       <!-- 본문 -->
-      <div class="content" align="center">
+      <div class="content">
       	<br>
       	<br>
          <jsp:include page="centerSlide.jsp"></jsp:include>

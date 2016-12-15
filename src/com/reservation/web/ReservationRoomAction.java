@@ -29,7 +29,7 @@ public class ReservationRoomAction implements Action {
 			result = reservationdao.reservationInsert(bean);
 
 			if (result == false) {
-				System.out.println("ì˜¤ë¥˜ë°œìƒ");
+				System.out.println("¿À·ù¹ß»ı");
 				return null;
 			}
 
