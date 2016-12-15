@@ -17,12 +17,17 @@
       </div>
       <!-- 본문 -->
       <div class="content" align="center">
+      	<br>
+      	<br>
          <jsp:include page="centerSlide.jsp"></jsp:include>
          <jsp:include page="roomintro.jsp"></jsp:include>
-      </div>   
+      </div>
+      <br>
+      <br>
+      <br>   
       <!-- 본문 끝 -->
       <div class="footer">
-         <jsp:include page="bottom.jsp"></jsp:include>
+         <jsp:include page="bottom1.jsp"></jsp:include>
       </div>
    </div>
 </body>

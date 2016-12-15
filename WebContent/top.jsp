@@ -4,7 +4,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>STUDYHARD에 오신걸 환영합니다.</title>
-<link rel="stylesheet" type="text/css" href="/css/style.css" />
 <style>
 body {
 	margin: 0;
@@ -74,7 +73,7 @@ ul.topnav li.icon {
 <body>
 
 	<ul class="topnav" id="myTopnav">
-		<li><a class="active" href="/main.do">Home</a></li>
+		<li><a href="/main.jsp">Home</a></li>
 		<li><a href="/room.jsp">StudyCafe</a></li>
 		<li><a href="/reservation/reservation_view.jsp">Reservation</a></li>
 		<li><a href="/ReviewList.rw">Rank</a></li>

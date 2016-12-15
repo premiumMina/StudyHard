@@ -17,12 +17,8 @@
 			<jsp:include page="login.jsp"></jsp:include>
 		</div>
 		<div class="content" align="center">
-			<div class="row">
-				<div class="col-lg-12">
+			
 					<h2>지점 안내</h2>
-				</div>
-			</div>
-
 			<hr>
 
 			<div class="row">
@@ -117,7 +113,7 @@
 			<hr>
 		</div>
 		<div class="footer">
-			<jsp:include page="bottom.jsp"></jsp:include>
+			<jsp:include page="bottom1.jsp"></jsp:include>
 		</div>
 	</div>
 </body>

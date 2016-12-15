@@ -55,9 +55,7 @@
 			<br>
 
 			<form action="UpdateAction2.do" method="post" id="join">
-				<table width="600" cellspacing="0" bordercolordark="white"
-					bordercolorlight="#CCCCCC" border="1" bordercolor="#CCCCCC"
-					align="center" height="283">
+				<table>
 					<tr>
 						<td bgcolor="#EFEEEE">¤&nbsp;E-MAIL</td>
 						<td width="500">
@@ -108,7 +106,7 @@
 			</form>
 		</div>
 		<div class="footer">
-			<jsp:include page="bottom.jsp"></jsp:include>
+			<jsp:include page="bottom1.jsp"></jsp:include>
 		</div>
 		<%} %>
 	</div>

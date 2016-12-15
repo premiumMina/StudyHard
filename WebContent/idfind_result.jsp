@@ -45,7 +45,7 @@
 				%>
 		</div>
 		<div class="footer">
-			<jsp:include page="/bottom.jsp"></jsp:include>
+			<jsp:include page="/bottom1.jsp"></jsp:include>
 		</div>
 	</div>
 </body>

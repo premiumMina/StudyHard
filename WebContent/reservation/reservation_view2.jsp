@@ -67,52 +67,53 @@ if(request.getParameter("action") == null) {
 %>
 
 <style>
-#calendarTable, #calendarTable th, #calendarTable td {
+table, th, td {
 	border-collapse: collapse;
 }
 
-#calendarTable {
-	border: 2px solid #000;
-	width: 519px;
+table#reserve {
+	border: 1px solid;
 }
 
-#calendarTable th, #calendarTable td {
-	width: <%=boxSize%> px;
+table#reserve tr, td {
+	border: 1px solid;
+}
+
+table#calendar {
+	border: 2px solid #000;
+	width: 100%;
+	max-width: 700px;
+}
+
+table#calendar th, td{
 	border: 1px solid #000;
 	border-collapse: collapse;
 	padding: 5px;
+	width: <%=boxSize%> px;
 }
 
-#calendarTable th {
+table#calendar th {
 	background-color: #666;
 	color: #fff;
 }
 
-#calendarTable td {
-	height: <%=boxSize%> px;
+table#calendar td {
 	text-align: left;
+	height: <%=boxSize%> px;
 }
 
-#calendarTable td.empty {
+table#calendar td.empty {
 	background-color: #DFDCD8;
 }
 
-#calendarTable td.toDayColor {
+table#calendar td.toDayColor {
 	background-color: #ffff00;
 }
 </style>
 </head>
 <body bgcolor='white'>
-	<table border='0' width='521' celpadding='0' cellspacing='0'>
-		<tr>
-			<td width='260' align='center' valign='middle'><b><%=getTitle(cal)%></b>
-			</td>
-		</tr>
-	</table>
-	<table>
-		<tr>
-			<td width="100%">
-				<table id="calendarTable">
+	<h4><%=getTitle(cal)%></h4>
+				<table id="calendar">
 					<tr>
 						<th>일</th>
 						<th>월</th>
@@ -171,21 +172,13 @@ if(request.getParameter("action") == null) {
 						}
 					%>
 				</table>
-
-
-			</td>
-		</tr>
-	</table>
-
-
 	<hr>
-	<b>예약 신청</b>
-	<br>
+	<h3>예약페이지</h3>
 	<form action="/ReservationRoom.rv" method="post" id="reservationform">
-		<table width='521' border="1">
-			<input type="text" id="name" name="name" value="<%=name%>" />
-			<input type="text" id="peoplenum" name="peoplenum" value="<%=peoplenum%>" />
-			<input type="text" id="type" name="type" value="<%=type%>" />
+			예약자 <input type="text" id="name" name="name" value="<%=name%>" />
+			예약인원  <input type="text" id="peoplenum" name="peoplenum" value="<%=peoplenum%>" />
+			예약지점 <input type="text" id="type" name="type" value="<%=type%>" />
+			<table id="reserve">
 			<tr align="center">
 				<td>방</td>
 				<td>
@@ -211,9 +204,9 @@ if(request.getParameter("action") == null) {
 
 			<tr align="center">
 				<td>이용시간</td>
-				<td>시작 시간<input type="text" name="startusingtime"
-					id="startusingtime"> 마지막 시간<input type="text"
-					name="endusingtime" id="endusingtime">
+				<td>
+					시작 시간<input type="text" name="startusingtime" id="startusingtime"> 
+					종료 시간<input type="text" name="endusingtime" id="endusingtime">
 				</td>
 			</tr>
 
@@ -227,20 +220,18 @@ if(request.getParameter("action") == null) {
 
 			<tr align="center">
 				<td>가격</td>
-				<input type="hidden" id=price name="price"
-					value="<%=peoplenum*1000%>" />
-				<td><label id="price"><%=peoplenum*1000%></label></td>
-			</tr>
-			<tr align="center">
-				<td colspan="2"><input type="button" value="신청"
-					onclick="sendReservation()"></td>
+				<td>
+					<input type="hidden" id=price name="price" value="<%=peoplenum*1000%>" />
+					<label id="price"><%=peoplenum*1000%></label>
+				</td>
 			</tr>
 		</table>
+		<input type="button" value="예약" onclick="sendReservation()">
 	</form>
 	<hr>
-	<b>예약 현황</b>
+	<h3>예약 현황</h3>
 	<hr>
-	<b>예약 대기</b>
-
+	<h3>예약 대기</h3>
+	<br>
 </body>
 </html>

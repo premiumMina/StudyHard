@@ -40,7 +40,7 @@
 		<%
 			if (id.equals("admin")) {
 		%>
-		<a href="admin.ao" target="_parent">[관리자모드]</a><br>
+		<a href="admin.jsp" target="_parent">[관리자모드]</a><br>
 		<%
 		}
 			%>

@@ -30,6 +30,8 @@
 		</div>
 		
 		<div class="content">
+			<h2>예약하기</h2>
+			<br>
 			지점 :
 			<select name="type" id="type" size="1">
 				<option value="송파">송파센터</option>
@@ -41,13 +43,14 @@
 			</select> 
 			인원 :
 			<input type="text" id="peoplenum" name="peoplenum" style="height:10px; width:80px">
-			<input type="button" value="결과" onclick="show()" >
+			<br>
+			<input type="button" value="예약가능여부 확인하기" onclick="show()" >
 			<hr>
 			<div id="result"></div>
 		</div>
 		
 		<div class="footer">
-			<jsp:include page="../bottom.jsp"></jsp:include>
+			<jsp:include page="/bottom1.jsp"></jsp:include>
 		</div>
 	</div>
 </body>
