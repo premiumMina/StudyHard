@@ -10,7 +10,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="/css/login.css" />
-
+<script src="../js/reservationview.js"></script>
 </head>
 <body>
 	<%
@@ -45,15 +45,14 @@
 		<%
 		}
 			%>
-		<label><b><%=name%> 님 반갑습니다.</b></label>
+		<label><b><%=name%> 님 반갑습니다.</b></label><br>
+		<input type="hidden" id="id" value="<%=id %>">	
 
 		<form action="/Logout.do" method="post">
 			<button type="submit">Logout</button>
 		</form>
-
-		<form action="/UpdateAction1.do" method="post">
-			<button type="submit">MyPage</button>
-		</form>
+		
+		<a href="/MyReservation.rv?id=<%=id%>"><button type="submit">My Reservation</button></a>
 	</div>
 
 	<%

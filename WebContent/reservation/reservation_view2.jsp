@@ -80,6 +80,7 @@ table, th, td {
 
 table#reserve {
 	border: 1px solid;
+	max-width: 700px;
 }
 
 table#reserve tr, td {
@@ -181,12 +182,20 @@ table#calendar td.toDayColor {
 					%>
 				</table>
 	<hr>
-	<h3>예약페이지</h3>
+	<h3>선택사항을 확인하세요.</h3>
 	<form action="/ReservationRoom.rv" method="post" id="reservationform">
+	<table id="reserve">
+		<tr>
+		<td>
 			예약자 <input type="text" id="name" name="name" value="<%=name%>" />
 			예약인원  <input type="text" id="peoplenum" name="peoplenum" value="<%=peoplenum%>" />
 			예약지점 <input type="text" id="type" name="type" value="<%=type%>" />
 			예약날짜  <input type="text" id="usingdate" name="usingdate" value="<%=bean.getUsingdate()%>" />
+		</td>
+		</tr>
+	</table>
+	<hr>
+	<h3>예약페이지</h3>
 		<table id="reserve">
 			<tr align="center">
 				<td>방</td>
@@ -242,7 +251,7 @@ table#calendar td.toDayColor {
 	<hr>
 	<h3>예약 현황</h3>
 	<div class="reservationstate">
-		<table>
+		<table id="reserve">
 			<tr align="center" valign="middle" bordercolor="#333333"
 				bgcolor="#f7f7f7">
 				<td width=70 height="26">

@@ -17,7 +17,7 @@ public class ReviewDetailAction implements Action {
 		boarddata = boarddao.getDetail(num);
 
 		if (boarddata == null) {
-			System.out.println("상세보기 실패");
+			System.out.println("");
 			return null;
 		}
 

@@ -16,7 +16,6 @@ public class ReviewAddAction implements Action {
 
 		try {
 			request.setCharacterEncoding("UTF-8");
-
 			board.setId(request.getParameter("name"));
 			board.setType(request.getParameter("room"));
 			board.setSubject(request.getParameter("subject"));
@@ -27,10 +26,10 @@ public class ReviewAddAction implements Action {
 			result = boarddao.boardInsert(board);
 
 			if (result == false) {
-				System.out.println("게시판 등록 실패");
+				System.out.println("");
 				return null;
 			}
-			System.out.println("게시판 등록 완료");
+			System.out.println("");
 
 			forward.setRedirect(true);
 			forward.setPath("/ReviewList.rw");

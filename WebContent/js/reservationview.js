@@ -28,8 +28,27 @@ function show() {
 				console.log(data);
 			}
 		})
-		
 	}
+}
+
+function send() {
+	id = $('#id').val();
+	$.ajax({
+		url : '/MyReservation.rv', /* Controller에서 받아줄 URL */
+		type : 'POST', /* GET과 POST의 차이는? */
+		data : {
+			"id" : id
+		},
+		context : this,
+
+		complete : function(data) {
+		},
+		success : function(data) {
+		},
+		error : function(data) {
+			console.log(data);
+		}
+	})
 }
 
 function sendReservation() {
