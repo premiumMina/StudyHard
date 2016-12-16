@@ -1,8 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8=UTF-8" pageEncoding="UTF-8"%>
+<%
+	String id = (String) session.getAttribute("id");
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <title>STUDYHARD에 오신걸 환영합니다.</title>
 <style>
 body {
@@ -71,18 +75,17 @@ ul.topnav li.icon {
 </head>
 
 <body>
-
 	<ul class="topnav" id="myTopnav">
 		<li><a href="/main.jsp">Home</a></li>
 		<li><a href="/room.jsp">StudyCafe</a></li>
 		<li><a href="/reservation/reservation_view.jsp">Reservation</a></li>
 		<li><a href="/ReviewList.rw">Review</a></li>
-		<li><a href="/UpdateAction1.do" >MyPage</a></li>
+		<li><a href="UpdateAction1.do">My Page</a></li>
 		<li><a href="/faq1.jsp">FAQ</a></li>
 		<li class="icon"><a href="javascript:void(0);"
 			style="font-size: 15px;" onclick="myFunction()">☰</a></li>
 	</ul>
-
+	
 	<script>
 		function myFunction() {
 			var x = document.getElementById("myTopnav");

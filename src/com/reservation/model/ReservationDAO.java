@@ -51,7 +51,7 @@ public class ReservationDAO {
 
 			return true;
 		} catch (Exception ex) {
-			System.out.println("reservationInsert ¿¡·¯ : " + ex);
+			System.out.println("reservationInsert error : " + ex);
 		} finally {
 			if(rs!=null) try{rs.close();}catch(SQLException ex){}
 			if(pstmt!=null) try{pstmt.close();}catch(SQLException ex){}
@@ -96,4 +96,34 @@ public class ReservationDAO {
 		}
 		return null;
 	}
+	
+	public List getMyDetail(String id) throws Exception {
+		List<ReservationBean> list = new ArrayList<ReservationBean>();
+		try {
+			pstmt = conn.prepareStatement("select * from songpa s, member m "+"where s.user=m.name and m.id ="+"'"+id+"'");
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				ReservationBean bean = new ReservationBean();
+				bean.setRoomname(rs.getInt("roomname"));
+				bean.setDate(rs.getString("date"));
+				bean.setStartusingtime(rs.getInt("startusingtime"));
+				bean.setEndusingtime(rs.getInt("endusingtime"));
+				bean.setPrice(rs.getInt("price"));
+				bean.setState(rs.getString("state"));
+				bean.setUser(rs.getString("user"));
+				bean.setId(rs.getInt("id"));
+				bean.setUsingdate(rs.getString("usingdate"));
+				list.add(bean);
+			}
+			return list;
+		}catch(Exception ex){
+			System.out.println("getMyDetail error : " + ex);
+		}finally{
+			if(rs!=null)try{rs.close();}catch(SQLException ex){}
+			if(pstmt !=null)try{pstmt.close();}catch(SQLException ex){}
+		}
+		return null;
+	}
+	
 }

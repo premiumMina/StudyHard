@@ -1,50 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
-
-	<display-name>StudyHard</display-name>
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>main.jsp</welcome-file>
-		<welcome-file>default.html</welcome-file>
-		<welcome-file>default.htm</welcome-file>
-		<welcome-file>default.jsp</welcome-file>
-	</welcome-file-list>
-	
-	<servlet>
-		<description>
+  <display-name>StudyHard</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>main.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>
 		</description>
-		<display-name>MemberFrontController</display-name>
-		<servlet-name>MemberFrontController</servlet-name>
-		<servlet-class>com.member.web.MemberFrontController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>MemberFrontController</servlet-name>
-		<url-pattern>*.do</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<description>
+    <display-name>MemberFrontController</display-name>
+    <servlet-name>MemberFrontController</servlet-name>
+    <servlet-class>com.member.web.MemberFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberFrontController</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>
 		</description>
-		<display-name>ReviewFrontController</display-name>
-		<servlet-name>ReviewFrontController</servlet-name>
-		<servlet-class>com.review.web.ReviewFrontController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ReviewFrontController</servlet-name>
-		<url-pattern>*.rw</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<description>
+    <display-name>ReviewFrontController</display-name>
+    <servlet-name>ReviewFrontController</servlet-name>
+    <servlet-class>com.review.web.ReviewFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReviewFrontController</servlet-name>
+    <url-pattern>*.rw</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>
 		</description>
-		<display-name>ReservationFrontController</display-name>
-		<servlet-name>ReservationFrontController</servlet-name>
-		<servlet-class>com.reservation.web.ReservationFrontController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ReservationFrontController</servlet-name>
-		<url-pattern>*.rv</url-pattern>
-	</servlet-mapping>
-	
+    <display-name>ReservationFrontController</display-name>
+    <servlet-name>ReservationFrontController</servlet-name>
+    <servlet-class>com.reservation.web.ReservationFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReservationFrontController</servlet-name>
+    <url-pattern>*.rv</url-pattern>
+  </servlet-mapping>
 </web-app>

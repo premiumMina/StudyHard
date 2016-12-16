@@ -1,12 +1,11 @@
 package com.member.model;
- 
+
 public class MemberBean {
 	private String id;
 	private String password;
 	private String name;
 	private String phoneNumber;
 
-	
 	public String getId() {
 		return id;
 	}
