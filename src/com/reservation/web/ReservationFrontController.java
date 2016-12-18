@@ -31,6 +31,7 @@ public class ReservationFrontController extends javax.servlet.http.HttpServlet i
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+<<<<<<< Updated upstream
 		} else if (command.equals("/MyReservation.rv")) {
 			action = new MyReservationAction();
 			try {
@@ -40,6 +41,10 @@ public class ReservationFrontController extends javax.servlet.http.HttpServlet i
 			}
 		} else if (command.equals("/ReservationUpdate1.rv")) {
 			action = new ReservationUpdate1();
+=======
+		}else if(command.equals("/admin.rv")) {
+			action = new AdminAction();
+>>>>>>> Stashed changes
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {

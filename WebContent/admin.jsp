@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="com.reservation.model.*" %>
+<%@ page import="java.util.*" %>
+<%
+	List memberList = (List) request.getAttribute("memberlist");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,98 +28,92 @@
 		<div class="content" align="center">
 			<h2>예약내역</h2>
 			<hr>
-			<table>
+				<table>
 				<tr>
 					<th>예약번호</th>
-					<th>예약자 명</th>
 					<th>룸</th>
-					<th>예약날짜</th>
-					<th>이용시간</th>
-					<th>사용 인원</th>
+					<th>사용날짜</th>
 					<th>가격</th>
 					<th>예약현황</th>
+					<th>예약자 명</th>
+					
+					
 				</tr>
+				<%
+					for (int i = 0; i < memberList.size(); i++) {
+						ReservationBean bean = (ReservationBean) memberList.get(i);
+					%>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>완료</td>
+					<td><%=bean.getId()%></td>
+					<td><%=bean.getRoomname()%></td>
+					<td><%=bean.getDate() %></td>
+					<td><%=bean.getPrice() %></td>
+					<td><%=bean.getState()%></td>
+					<td><%=bean.getUser()%></td>
 				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>대기</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>취소</td>
-				</tr>
+				<%
+					}
+				%> 
 			</table>
 			<h2>예약대기</h2>
 			<hr>
 			<table>
 				<tr>
 					<th>예약번호</th>
-					<th>예약자 명</th>
 					<th>룸</th>
-					<th>예약날짜</th>
-					<th>이용시간</th>
-					<th>사용 인원</th>
+					<th>사용날짜</th>
 					<th>가격</th>
-					<th>예약변경</th>
+					<th>예약현황</th>
+					<th>예약자 명</th>
+					
+					
 				</tr>
+				<%
+					for (int i = 0; i < memberList.size(); i++) { 
+						if (bean.getState()=="waiting") {
+						ReservationBean bean = (ReservationBean) memberList.get(i);
+						
+					%>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>
-					<input type="submit" value="취소" onclick="#"> 
-					<input type="submit" value="예약" onclick="#">
-					</td>
+					<td><%=bean.getId()%></td>
+					<td><%=bean.getRoomname()%></td>
+					<td><%=bean.getDate() %></td>
+					<td><%=bean.getPrice() %></td>
+					<td><%=bean.getState() %></td>
+					<td><%=bean.getUser()%></td>
 				</tr>
+				<%
+					}
+				%> 
 			</table>
 			<h2>예약취소</h2>
 			<hr>
 			<table>
 				<tr>
 					<th>예약번호</th>
-					<th>예약자 명</th>
 					<th>룸</th>
-					<th>예약날짜</th>
-					<th>이용시간</th>
-					<th>사용 인원</th>
+					<th>사용날짜</th>
 					<th>가격</th>
 					<th>예약현황</th>
+					<th>예약자 명</th>
+					
+					
 				</tr>
+				<%
+					for (int i = 0; i < memberList.size(); i++) {
+						ReservationBean bean = (ReservationBean) memberList.get(i);
+					%>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>취소</td>
+					<td><%=bean.getId()%></td>
+					<td><%=bean.getRoomname()%></td>
+					<td><%=bean.getDate() %></td>
+					<td><%=bean.getPrice() %></td>
+					<td><%=bean.getState()%></td>
+					<td><%=bean.getUser()%></td>
 				</tr>
+				<%
+					}
+				%> 
 			</table>
 		</div>
 		<br>

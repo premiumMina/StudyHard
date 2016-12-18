@@ -214,9 +214,8 @@ table#calendar td.toDayColor {
 
 			<tr align="center">
 				<td>이용시간</td>
-				<td>시작 시간<input type="text" name="startusingtime"
-					id="startusingtime"> 종료 시간<input type="text"
-					name="endusingtime" id="endusingtime">
+				<td>시작 시간<input type="text" name="startusingtime" id="startusingtime"> 
+					종료 시간<input type="text" name="endusingtime" id="endusingtime">
 				</td>
 			</tr>
 
