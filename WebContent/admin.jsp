@@ -65,26 +65,24 @@
 					<th>가격</th>
 					<th>예약현황</th>
 					<th>예약자 명</th>
-					
-					
 				</tr>
 				<%
-					for (int i = 0; i < memberList.size(); i++) { 
-						if (bean.getState()=="waiting") {
+					for (int i = 0; i < memberList.size(); i++) {
 						ReservationBean bean = (ReservationBean) memberList.get(i);
-						
-					%>
+						if (bean.getState().equals("waiting")) {
+				%>
 				<tr>
 					<td><%=bean.getId()%></td>
 					<td><%=bean.getRoomname()%></td>
-					<td><%=bean.getDate() %></td>
-					<td><%=bean.getPrice() %></td>
-					<td><%=bean.getState() %></td>
+					<td><%=bean.getDate()%></td>
+					<td><%=bean.getPrice()%></td>
+					<td><%=bean.getState()%></td>
 					<td><%=bean.getUser()%></td>
 				</tr>
 				<%
 					}
-				%> 
+					}
+				%>
 			</table>
 			<h2>예약취소</h2>
 			<hr>
@@ -102,6 +100,7 @@
 				<%
 					for (int i = 0; i < memberList.size(); i++) {
 						ReservationBean bean = (ReservationBean) memberList.get(i);
+						if (bean.getState().equals("cancel")) {
 					%>
 				<tr>
 					<td><%=bean.getId()%></td>
@@ -112,6 +111,7 @@
 					<td><%=bean.getUser()%></td>
 				</tr>
 				<%
+					}
 					}
 				%> 
 			</table>
