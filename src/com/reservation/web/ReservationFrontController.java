@@ -38,15 +38,15 @@ public class ReservationFrontController extends javax.servlet.http.HttpServlet i
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		} else if (command.equals("/ReservationUpdate1.rv")) {
-			action = new ReservationUpdate1();
+		} else if(command.equals("/admin.rv")) {
+			action = new AdminAction();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		} else if(command.equals("/admin.rv")) {
-			action = new AdminAction();
+		}else if (command.equals("/ReservationUpdate2.rv")) {
+			action = new ReservationUpdate2();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {

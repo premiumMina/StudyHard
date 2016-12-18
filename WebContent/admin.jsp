@@ -11,6 +11,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>STUDYHARD에 오신걸 환영합니다.</title>
+<script src="../js/reservationview.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
 <style>
@@ -65,6 +67,7 @@
 					<th>가격</th>
 					<th>예약현황</th>
 					<th>예약자 명</th>
+					<th>승인</th>
 				</tr>
 				<%
 					for (int i = 0; i < memberList.size(); i++) {
@@ -78,13 +81,14 @@
 					<td><%=bean.getPrice()%></td>
 					<td><%=bean.getState()%></td>
 					<td><%=bean.getUser()%></td>
+					<td><input type="button" id="<%=bean.getId()%>" value="예약상태로 승인" onclick="javascript:adminOK()"></td>
 				</tr>
 				<%
 					}
 					}
 				%>
 			</table>
-			<h2>예약취소</h2>
+			<h2>예약취소 신청내역</h2>
 			<hr>
 			<table>
 				<tr>
@@ -94,13 +98,14 @@
 					<th>가격</th>
 					<th>예약현황</th>
 					<th>예약자 명</th>
+					<th>승인</th>
 					
 					
 				</tr>
 				<%
 					for (int i = 0; i < memberList.size(); i++) {
 						ReservationBean bean = (ReservationBean) memberList.get(i);
-						if (bean.getState().equals("cancel")) {
+						if (bean.getState().equals("approval")) {
 					%>
 				<tr>
 					<td><%=bean.getId()%></td>
@@ -109,6 +114,7 @@
 					<td><%=bean.getPrice() %></td>
 					<td><%=bean.getState()%></td>
 					<td><%=bean.getUser()%></td>
+					<td><input type="button" id="<%=bean.getId()%>" value="예약취소 승인" onclick="javascript:adminOK()"></td>
 				</tr>
 				<%
 					}
