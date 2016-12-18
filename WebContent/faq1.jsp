@@ -87,7 +87,7 @@ ul.tab li a {
 			</div>
 		<hr>
 	</div>
-	
+</div>
 	<div class="footer">
 				<jsp:include page="bottom1.jsp"></jsp:include>
 	</div>

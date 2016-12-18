@@ -51,7 +51,11 @@ public class ReservationDAO {
 
 			return true;
 		} catch (Exception ex) {
+<<<<<<< Updated upstream
 			System.out.println("reservationInsert error : " + ex);
+=======
+			System.out.println("reservationInsert 에러 : " + ex);
+>>>>>>> Stashed changes
 		} finally {
 			if(rs!=null) try{rs.close();}catch(SQLException ex){}
 			if(pstmt!=null) try{pstmt.close();}catch(SQLException ex){}
@@ -97,10 +101,17 @@ public class ReservationDAO {
 		return null;
 	}
 	
+<<<<<<< Updated upstream
 	public List getMyDetail(String id) throws Exception {
 		List<ReservationBean> list = new ArrayList<ReservationBean>();
 		try {
 			pstmt = conn.prepareStatement("select * from songpa s, member m "+"where s.user=m.name and m.id ="+"'"+id+"'");
+=======
+	public List getAllMemberReservaiton() throws Exception {
+		List<ReservationBean> list = new ArrayList<ReservationBean>();
+		try {
+			pstmt = conn.prepareStatement("select roomname, date, startusingtime, endusingtime, price, state, user, id, usingdate from studyDB.songpa" );
+>>>>>>> Stashed changes
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
@@ -118,13 +129,18 @@ public class ReservationDAO {
 			}
 			return list;
 		}catch(Exception ex){
+<<<<<<< Updated upstream
 			System.out.println("getMyDetail error : " + ex);
+=======
+			System.out.println("getDetail 에러: " + ex);
+>>>>>>> Stashed changes
 		}finally{
 			if(rs!=null)try{rs.close();}catch(SQLException ex){}
 			if(pstmt !=null)try{pstmt.close();}catch(SQLException ex){}
 		}
 		return null;
 	}
+<<<<<<< Updated upstream
 	
 	public boolean updateReservaton(int id) throws SQLException{
 		String sql = null;
@@ -147,4 +163,7 @@ public class ReservationDAO {
 		return false;
 	}
 	
+=======
+>>>>>>> Stashed changes
 }
+
