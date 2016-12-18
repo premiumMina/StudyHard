@@ -10,8 +10,8 @@ function show() {
 	} else {
 
 		$.ajax({
-			url : '/ReservationView.rv', /* Controller에서 받아줄 URL */
-			type : 'POST', /* GET과 POST의 차이는? */
+			url : '/ReservationView.rv',
+			type : 'POST',
 			data : {
 				"peoplenum" : peoplenum,
 				"type" : type,
@@ -34,8 +34,8 @@ function show() {
 function send() {
 	id = $('#id').val();
 	$.ajax({
-		url : '/MyReservation.rv', /* Controller에서 받아줄 URL */
-		type : 'POST', /* GET과 POST의 차이는? */
+		url : '/MyReservation.rv',
+		type : 'POST',
 		data : {
 			"id" : id
 		},
@@ -70,8 +70,8 @@ function cancel() {
 	obj = $(event.target).closest('tr');
 	
 	$.ajax({
-		url : '/ReservationUpdate1.rv', /* Controller에서 받아줄 URL */
-		type : 'POST', /* GET과 POST의 차이는? */
+		url : '/ReservationUpdate1.rv',
+		type : 'POST', 
 		data : {
 			"num" : num
 		},

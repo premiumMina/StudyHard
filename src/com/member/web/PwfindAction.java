@@ -7,7 +7,7 @@ import javax.servlet.http.HttpSession;
 import com.member.model.MemberBean;
 import com.member.model.MemberDAO;
 
-public class idfindAction implements Action {
+public class PwfindAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
 		request.setCharacterEncoding("UTF-8");
@@ -16,13 +16,14 @@ public class idfindAction implements Action {
 		MemberBean member = new MemberBean();
 
 		String name = request.getParameter("name");
+		String id = request.getParameter("id");
 		String phoneNum = request.getParameter("phoneNum");
-		member = memberdao.idfind(name, phoneNum);
+		member = memberdao.pwfind(name, id, phoneNum);
 
-		request.setAttribute("idfind", member);
+		request.setAttribute("pwfind", member);
 
 		forward.setRedirect(false);
-		forward.setPath("/idfind_result.jsp");
+		forward.setPath("/pwfind_result.jsp");
 
 		return forward;
 	}

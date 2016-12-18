@@ -64,7 +64,7 @@ public class MemberFrontController extends javax.servlet.http.HttpServlet implem
 			}
 
 		} else if (command.equals("/idfindAction.do")) { // 회원가입 액션
-			action = new idfindAction();
+			action = new IdfindAction();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
@@ -72,7 +72,7 @@ public class MemberFrontController extends javax.servlet.http.HttpServlet implem
 			}
 
 		} else if (command.equals("/pwfindAction.do")) { // 회원가입 액션
-			action = new pwfindAction();
+			action = new PwfindAction();
 			try {
 				forward = action.execute(request, response);
 			} catch (Exception e) {
