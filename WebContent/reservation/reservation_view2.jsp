@@ -214,8 +214,9 @@ table#calendar td.toDayColor {
 
 			<tr align="center">
 				<td>이용시간</td>
-				<td>시작 시간<input type="text" name="startusingtime" id="startusingtime"> 
-					종료 시간<input type="text" name="endusingtime" id="endusingtime">
+				<td>시작 시간<br>
+					<font color="grey" size="2">24시 단위로 적어주세요. ex) 오후 6시 = 18</font><input type="text" name="startusingtime" id="startusingtime"> 
+					<font color="grey" size="2">24시 단위로 적어주세요. ex) 오후 6시 = 18</font>	종료 시간<input type="text" name="endusingtime" id="endusingtime">
 				</td>
 			</tr>
 

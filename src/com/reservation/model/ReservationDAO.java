@@ -71,7 +71,7 @@ public class ReservationDAO {
 			people = "3%";
 		}
 		try {
-			pstmt = conn.prepareStatement("select roomname, date, startusingtime, endusingtime, price, state, user, id, usingdate from studyDB." + type + " WHERE roomname LIKE "+"'"+ people +"' and "+"usingdate='"+usingdate+"'");
+			pstmt = conn.prepareStatement("select roomname, date, startusingtime, endusingtime, price, state, user, id, usingdate from studyDB." + type + " WHERE state='waiting' or state='true'and roomname LIKE "+"'"+ people +"' and "+"usingdate='"+usingdate+"'");
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
@@ -155,14 +155,19 @@ public class ReservationDAO {
 		return null;
 	}
 
-	public boolean updateReservaton(int id) throws SQLException {
-		String sql = null;
-
+	public boolean updateCancelOK(int id, String msg) throws SQLException {
+		String sql = "";
+		String state = "";
+		if (msg.equals("approval")) {
+			state = "cancel";
+		} else if (msg.equals("waiting")) {
+			state = "true";
+		}
 		try {
 			sql = "update songpa set state=? where id=?";
 
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, "approval");
+			pstmt.setString(1, state);
 			pstmt.setInt(2, id);
 			pstmt.executeUpdate();
 			return true;

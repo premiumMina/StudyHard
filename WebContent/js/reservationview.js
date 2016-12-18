@@ -63,32 +63,33 @@ function sendReservation() {
 	$('#reservationform').submit();
 }
 
-function cancel() {
+function adminOK() {
 	
 	num = event.target.id;
-	
-	obj = $(event.target).closest('tr');
-	
+	obj = event.target.closest('tr').children[4].textContent;
+	target =  event.target.closest('tr').children[4];
 	$.ajax({
-		url : '/ReservationUpdate1.rv',
+		url : '/ReservationUpdate2.rv',
 		type : 'POST', 
 		data : {
-			"num" : num
-		},
+			"num" : num,
+			"obj" : obj
+ 		},
 		context : this,
 
 		complete : function(data) {
 			
 		},
 		success : function(data) {
-			var target = obj.children()[4]
-			if (target.textContent == 'true')
-				target.textContent = 'approval';
+			if (target.textContent == 'approval') {
+				target.textContent = 'cancel';
+			} else if (target.textContent == 'waiting') {
+				target.textContent = 'true';
+			}
 		},
 		error : function(data) {
 		}
 	})
 }
-
 
 
