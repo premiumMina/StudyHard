@@ -154,6 +154,24 @@ public class ReservationDAO {
 		}
 		return null;
 	}
+	
+	public boolean updateApproval(int id) throws SQLException {
+		String sql = "";
+		try {
+			sql = "update songpa set state=? where id=?";
+
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, "approval");
+			pstmt.setInt(2, id);
+			pstmt.executeUpdate();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (pstmt != null) {pstmt.close();}
+		}
+		return false;
+	}
 
 	public boolean updateCancelOK(int id, String msg) throws SQLException {
 		String sql = "";
