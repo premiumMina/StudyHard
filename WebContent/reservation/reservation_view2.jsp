@@ -16,17 +16,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>STUDYHARD에 오신걸 환영합니다.</title>
 <script src="../js/reservationview.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.23/themes/base/jquery-ui.css">
-<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-<script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
-<link rel="stylesheet"
-	href="http://jqueryui.com/resources/demos/style.css">
-<script>
-	$(function() {
-		$("#datepicker").datepicker();
-	});
-</script>
 <%
 	int action = 0; //up(1) down(0)
 	int currYear = 0;
@@ -242,7 +231,7 @@ table#calendar td.toDayColor {
 			<tr align="center">
 				<td>가격</td>
 				<td><input type="hidden" id=price name="price"
-					value="<%=peoplenum*1000%>" /> <label id="price"><%=peoplenum*1000%></label>
+					value="<%=peoplenum*1500%>" /> <label id="price"><%=peoplenum*1000%></label>
 				</td>
 			</tr>
 		</table>
@@ -307,8 +296,6 @@ table#calendar td.toDayColor {
 			<%} %>
 		</table>
 	</div>
-	<hr>
-	<h3>예약 대기</h3>
 	<br>
 </body>
 </html>

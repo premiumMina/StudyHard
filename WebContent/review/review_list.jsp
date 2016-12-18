@@ -8,7 +8,6 @@
 	String name = (String) session.getAttribute("name");
 	List boardList = (List) request.getAttribute("boardlist");
 %>
-
 <!DOCTYPE html>
 <html>
 <head>
