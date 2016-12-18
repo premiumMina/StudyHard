@@ -20,8 +20,7 @@
       <div class="content">
       	<br>
       	<br>
-         <jsp:include page="centerSlide.jsp"></jsp:include>
-         <jsp:include page="roomintro.jsp"></jsp:include>
+      	
       </div>
       <br>
       <br>

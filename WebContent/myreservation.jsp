@@ -10,7 +10,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<script src="../js/reservationview.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <title>STUDYHARD에 오신걸 환영합니다.</title>
 </head>
 <body>
@@ -25,24 +27,26 @@
 		<div class="content">
 			<h2>예약내역</h2>
 			<hr>
-			<table>
+			<table id="reserve">
 				<tr>
 					<th>예약번호</th>
 					<th>룸</th>
 					<th>사용날짜</th>
 					<th>가격</th>
 					<th>예약현황</th>
+					<th>예약취소</th>
 				</tr>
 				<%
 					for (int i = 0; i < myList.size(); i++) {
 						ReservationBean bean = (ReservationBean) myList.get(i);
 				%>
 				<tr>
-					<td><%=bean.getId()%></td>
+					<td><input type="hidden" class="num" value="<%=bean.getId()%>"><%=bean.getId()%></td>
 					<td><%=bean.getRoomname()%></td>
 					<td><%=bean.getUsingdate()%></td>
 					<td><%=bean.getPrice()%></td>
 					<td><%=bean.getState()%></td>
+					<td><input type="button" id="<%=bean.getId()%>" value="예약취소" onclick="javascript:cancel()"></td>
 				</tr>
 				<%
 					}

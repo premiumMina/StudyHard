@@ -63,3 +63,32 @@ function sendReservation() {
 	$('#reservationform').submit();
 }
 
+function cancel() {
+	
+	num = event.target.id;
+	
+	obj = $(event.target).closest('tr');
+	
+	$.ajax({
+		url : '/ReservationUpdate1.rv', /* Controller에서 받아줄 URL */
+		type : 'POST', /* GET과 POST의 차이는? */
+		data : {
+			"num" : num
+		},
+		context : this,
+
+		complete : function(data) {
+			
+		},
+		success : function(data) {
+			var target = obj.children()[4]
+			if (target.textContent == 'true')
+				target.textContent = 'approval';
+		},
+		error : function(data) {
+		}
+	})
+}
+
+
+

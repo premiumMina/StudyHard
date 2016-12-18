@@ -6,7 +6,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <title>STUDYHARD에 오신걸 환영합니다.</title>
 <style>
 body {
@@ -76,7 +75,7 @@ ul.topnav li.icon {
 
 <body>
 	<ul class="topnav" id="myTopnav">
-		<li><a href="/main.jsp">Home</a></li>
+		<li><a href="/main.do">Home</a></li>
 		<li><a href="/room.jsp">StudyCafe</a></li>
 		<li><a href="/reservation/reservation_view.jsp">Reservation</a></li>
 		<li><a href="/ReviewList.rw">Review</a></li>
