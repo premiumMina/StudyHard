@@ -12,7 +12,8 @@ import com.member.model.MemberDAO;
 public class LoginAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
-
+		request.setCharacterEncoding("UTF-8");
+		
 		HttpSession session = request.getSession();
 		MemberDAO memberdao = new MemberDAO();
 		MemberBean member = new MemberBean();

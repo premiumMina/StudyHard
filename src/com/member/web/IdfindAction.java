@@ -10,8 +10,10 @@ import com.member.model.MemberDAO;
 public class IdfindAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = new ActionForward();
+		
 		request.setCharacterEncoding("UTF-8");
 		HttpSession session = request.getSession();
+		
 		MemberDAO memberdao = new MemberDAO();
 		MemberBean member = new MemberBean();
 
@@ -20,10 +22,8 @@ public class IdfindAction implements Action {
 		member = memberdao.idfind(name, phoneNum);
 
 		request.setAttribute("idfind", member);
-
 		forward.setRedirect(false);
 		forward.setPath("/idfind_result.jsp");
-
 		return forward;
 	}
 }

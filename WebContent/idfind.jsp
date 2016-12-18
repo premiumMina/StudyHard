@@ -25,7 +25,7 @@
 		<div class="content">
 			<h3>◆ 아이디 찾기</h3>
 			<hr>
-			<form name="find1" id="find1" action="idfindAction.do" method="post">
+			<form name="find1" id="find1" action="IdfindAction.do" method="post">
 				<table>
 					<tr>
 						<td align="center" bgcolor="#EFEEEE">이름</td>
@@ -51,7 +51,7 @@
 
 			<h3>◆ 비밀번호 찾기</h3>
 			<hr>
-			<form name="find2" id="find2" action="pwfindAction.do" method="post">
+			<form name="find2" id="find2" action="PwfindAction.do" method="post">
 
 				<table>
 					<tr>

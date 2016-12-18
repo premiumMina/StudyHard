@@ -63,7 +63,7 @@ public class MemberFrontController extends javax.servlet.http.HttpServlet implem
 				e.printStackTrace();
 			}
 
-		} else if (command.equals("/idfindAction.do")) { // 회원가입 액션
+		} else if (command.equals("/IdfindAction.do")) { // 회원가입 액션
 			action = new IdfindAction();
 			try {
 				forward = action.execute(request, response);
@@ -71,7 +71,7 @@ public class MemberFrontController extends javax.servlet.http.HttpServlet implem
 				e.printStackTrace();
 			}
 
-		} else if (command.equals("/pwfindAction.do")) { // 회원가입 액션
+		} else if (command.equals("/PwfindAction.do")) { // 회원가입 액션
 			action = new PwfindAction();
 			try {
 				forward = action.execute(request, response);
