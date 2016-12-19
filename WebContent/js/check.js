@@ -8,8 +8,16 @@
 		var name = $('#uname').val();
 		idCheck = $('#idcheck').val();
 		
+		var regExp = /[0-9a-zA-Z][_0-9a-zA-Z-]*@[_0-9a-zA-Z-]+(\.[_0-9a-zA-Z-]+){1,2}$/;
+		
 		if(email.length == 0) {
 			alert('아이디를 입력하세요.');
+			$('#email').focus();	 
+			return false;
+		} 
+
+		if(!email.match(regExp)){
+			alert('이메일 형식으로 입력하세요.');
 			$('#email').focus();	 
 			return false;
 		}
@@ -48,7 +56,7 @@
 			alert('아이디 중복체크를 해주세요.');
 			return false;
 		}
-	
+		
 	
 		if(password1 != password2){
 			alert('비밀번호가 맞지 않습니다.');

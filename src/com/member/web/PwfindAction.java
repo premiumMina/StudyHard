@@ -21,7 +21,6 @@ public class PwfindAction implements Action {
 		member = memberdao.pwfind(name, id, phoneNum);
 
 		request.setAttribute("pwfind", member);
-
 		forward.setRedirect(false);
 		forward.setPath("/pwfind_result.jsp");
 

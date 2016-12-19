@@ -47,7 +47,7 @@
 							<p>
 								<input type="text" name="email" id="email" size="30"
 									maxlength="30" style="height: 20px; border: 1px solid #ccc;">
-								<input type="submit" value="▶ 아이디 중복확인" onclick="checkEvents()"><br> 
+								<input type="button" value="▶ 아이디 중복확인" onclick="checkEvents()"><br> 
 								<input type="hidden" name="idcheck" id="idcheck"><br> ※
 								본인의 정확한 이메일을 입력해주세요.
 							</p>

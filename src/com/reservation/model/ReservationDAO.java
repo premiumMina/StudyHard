@@ -71,7 +71,10 @@ public class ReservationDAO {
 			people = "3%";
 		}
 		try {
-			pstmt = conn.prepareStatement("select roomname, date, startusingtime, endusingtime, price, state, user, id, usingdate from studyDB." + type + " WHERE state='waiting' or state='true'and roomname LIKE "+"'"+ people +"' and "+"usingdate='"+usingdate+"'");
+			String sql = "select roomname, date, startusingtime, endusingtime, price, state, user, id, usingdate from studyDB."
+					+ type + " WHERE state='waiting' or state='true'and roomname LIKE " + "'" + people + "' and "
+					+ "usingdate='" + usingdate + "'";
+			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {

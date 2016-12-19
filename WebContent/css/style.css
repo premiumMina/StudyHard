@@ -20,11 +20,7 @@ table {
 	background-color: #ffffff;
 	margin-left: 8cm;
 	padding: 0;
-<<<<<<< Updated upstream
 	overflow: scroll
-=======
-	overflow: auto;
->>>>>>> Stashed changes
 }
 
 .sideinfo {

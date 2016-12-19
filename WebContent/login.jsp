@@ -3,6 +3,7 @@
 <%
 	String id = (String) session.getAttribute("id");
 	String name = (String) session.getAttribute("name");
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -26,6 +27,9 @@
 			<button type="submit">Login</button>
 		</div>
 	</form>
+	<%
+		
+	%>
 
 	<div class="container">
 		<form action="join.do" method="post">
