@@ -18,7 +18,7 @@ table {
 
 .content  {
 	background-color: #ffffff;
-	margin-left: 8cm;
+	margin-left: 1cm;
 	padding: 0;
 	overflow: scroll
 }
@@ -42,7 +42,7 @@ table {
 
 .row {
    margin-right: 15px;
-   margin-left: 15px;
+   margin-left: 10px;
 }
 
 .img-responsive {

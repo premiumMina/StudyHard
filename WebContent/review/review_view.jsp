@@ -22,15 +22,24 @@
 		</div>
 		<div class="content">
 			<h2>회원 리뷰</h2>
-
 			<hr>
-				<label>작성자 : <%=board.getId()%></label><br> 
-				지점 선택 : <%=board.getType() %>
-				<br> 내용 <br>
-				<hr>
-				<%=board.getContent()%>
-				<br> 평점(10점 만점기준) : <%=board.getStar() %>
-			
+			<table id="reverse">
+			<tr>
+				<td width="80">작성자 </td>
+				<td> <%=board.getId()%></td>
+			</tr>
+			<tr>
+				<td>지점 선택 </td> 
+				<td><%=board.getType() %></td>
+			</tr>
+			<tr>
+				<td><br> 내용 <br></td>
+				<td><%=board.getContent()%></td>
+			</tr>
+				<td> 평점(10점 만점기준)</td> 
+				<td><%=board.getStar() %></td>
+			<tr>
+			</table>
 			<input type="button" value="목록" onclick="javascript:location.href='/ReviewList.rw'">
 		</div>
 		<div class="footer">
