@@ -1,4 +1,4 @@
-![homeimage](/Users/premiummina/Desktop/homeimage.png)
+
 <h2> 프로젝트 명 </h2>
 StudyHard
 
